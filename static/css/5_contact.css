@@ -209,6 +209,8 @@ textarea {
     justify-content: center;
 
     text-align: left;
+    max-width: 100%;
+    min-width: 0;
 }
 
 .header-text p {
