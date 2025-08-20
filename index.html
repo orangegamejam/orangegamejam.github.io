@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Orange Jam</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./static/css/0_base.css">
+    <link rel="stylesheet" href="./static/css/1_landing.css">
+    <link rel="stylesheet" href="./static/css/2_about.css">
+    <link rel="stylesheet" href="./static/css/3_registration.css">
+    <link rel="stylesheet" href="./static/css/4_sponsors.css">
+    <link rel="stylesheet" href="./static/css/5_contact.css">
+    <link rel="stylesheet" href="./static/css/6_footer.css">
+
+    <!-- Link Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+     <!-- JS -->
+    <script type="text/javascript" src="./static/js/notify.js"></script>
+    <script type="text/javascript" src="./static/js/sidebar.js"></script>
+    <script type="text/javascript" src="./static/js/countdown.js"></script>
+    <script type="text/javascript" src="./static/js/subscribe.js"></script>
+    <script type="text/javascript" src="./static/js/sendmessage.js"></script>
+
+    <!-- Landing Page -->
+     <div class="notification-container">
+        <div class="notification">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363">
+                <g>
+                    <rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/>
+                    <path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/>
+                </g>
+            </svg>
+
+            <p class="notification-text">Successfully subscribed to mailing list!</p>
+        </div>
+    </div>
+    
+    <nav class="navbar">
+        <div class="nav-left">
+            <img id="nav-logo" src="./static/img/logo.png" alt="Logo">
+            <a href="#landing-section"><span class="gradient-text long" id="nav-logo-text">The Orange Game Jam</span></a>
+            <a href="#landing-section"></a><span class="gradient-text short" id="nav-logo-text">Orange Jam</span></a>
+        </div>
+
+        <div class="nav-middle">
+            <div class="nav-links">
+                <a href="#about-section">About</a>
+                <a href="#registration-section">Registration</a>
+                <a href="#sponsors-section">Sponsors</a>
+                <a href="#contact-section">Contact</a>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <a href="#sponsors-section"><button class="button-filled" id="nav-btn">Sponsor Us</button></a>
+
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="hamburger-dropdown" id="hamburger-dropdown">
+            <a class="nav-link" href="#about-section">About</a>
+            <a class="nav-link" href="#registration-section">Registration</a>
+            <a class="nav-link" href="#sponsors-section">Sponsors</a>
+            <a class="nav-link" href="#contact-section">Contact</a>
+        </div>
+    </nav>
+
+    <section class="landing-section" id="landing-section">
+        <div class="landing-title">
+            <div class="landing-title-left">
+                <img id="landing-logo" src="./static/img/logo.png">
+            </div>
+
+            <div class="landing-title-right">
+                <p class="title-text">
+                    THE <span class="gradient-text">ORANGE</span>
+                    GAME <span class="gradient-text">JAM</span>
+                </p>
+
+                <p class="title-subtext">
+                    Central Florida's premier in-person game
+                    development hackathon for EVERYONE.
+                </p>
+            </div>
+        </div>
+
+        <div class="cards" id="landing-cards">
+            <div class="card" id="landing-card">
+                <img class="landing-cards-logo" src="./static/icons/person.2.svg"></img>
+                <p class="card-title">All Ages Welcome</p>
+                <p class="card-text">Perfect for beginners to pros of any age or background.</p>
+            </div>
+            <div class="card" id="landing-card">
+                <img class="landing-cards-logo" src="./static/icons/icons8-target-50.png"></img>
+                <p class="card-title">All Skill Levels</p>
+                <p class="card-text">Use any platform and even AI tools — leveling the playing field.</p>
+            </div>
+            <div class="card" id="landing-card">
+                <img class="landing-cards-logo" src="./static/icons/icons8-address-48.png"></img>
+                <p class="card-title">Venue & Date TBD</p>
+                <p class="card-text">We're finalizing the perfect time & place in Orlando, Fl — stay tuned!</p>
+            </div>
+        </div>
+
+        <div class="landing-actions">
+            <a href="#stay-updated-section"><button class="button-filled glow" id="landing-action-btn">Stay Updated</button></a>
+            <a href="#sponsors-section"><button class="button-holo" id="landing-action-btn"><span class="gradient-text">Become a Sponsor</span></button></a>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section class="about-section" id="about-section">
+        <div class="section-header">
+            <p class="section-title">What is <span class="gradient-text">Orange Jam</span>?</p>
+            <p class="section-description">Orange Jam is an in-person game development hackathon for all ages and experience levels. <strong class="text-emphasize">Use any platform</strong> — from Scratch and game engines like Unity or Unreal to simple command line games. <span class="text-emphasize">Everything is judged equally</span>, so that anyone can jump in, create, and compete.</p>
+        </div>
+
+        <div class="about-cards">
+            <div class="cards" id="about-cards">
+                <div class="card" id="about-card">
+                    <div class="about-cards-logo-bg"><img class="about-cards-logo logo-image-black" src="./static/icons/icons8-joystick-48.png"></img></div>
+                    <p class="card-title">The Challenge</p>
+                    <p class="card-text">Given a theme, you have 10 hours to develop a video game or interactive experience.</p>
+                </div>
+                <div class="card" id="about-card">
+                    <div class="about-cards-logo-bg"><img class="about-cards-logo logo-image-black" src="./static/icons/icons8-code-50.png"></img></div>
+                    <p class="card-title">AI-Friendly</p>
+                    <p class="card-text">AI tools are welcome to help level the playing field for everyone.</p>
+                </div>
+                <div class="card" id="about-card">
+                    <div class="about-cards-logo-bg"><img class="about-cards-logo logo-image-black" src="./static/icons/icons8-time-48.png"></img></div>
+                    <p class="card-title">One-Day Event</p>
+                    <p class="card-text">Everything happens in one exciting day — with lunch, snacks, activities, and more.</p>
+                </div>
+                <div class="card" id="about-card">
+                    <div class="about-cards-logo-bg"><img class="about-cards-logo logo-image-black" src="./static/icons/icons8-trophy-48.png"></img></div>
+                    <p class="card-title">Win Prizes</p>
+                    <p class="card-text">Cash, trophies, and sponsor-backed prizes await the top teams in each division.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Page -->
+    <section class="registration-section" id="registration-section">
+        <div class="section-header">
+            <p class="section-title">Team <span class="gradient-text">Registration</span>.</p>
+            <p class="section-description">Registration for participating teams (1-3 people) opens on <span class="gradient-text">October 31st, 2025</span>. Teams will be able register on our website for <span class="gradient-text">$10</span></p>
+        </div>
+
+        <div class="card" id="registration-timer">
+            <div class="digit">
+                <div class="number">
+                    <p class="timer-text" id="days">67</p>
+                </div>
+                <p class="timer-label">days</p>
+            </div>
+
+            <div class="divider">
+                <div class="divider-dot"></div>
+                <div class="divider-dot"></div>
+            </div>
+
+            <div class="digit">
+                <div class="number">
+                    <p class="timer-text" id="hours">13</p>
+                </div>
+                <p class="timer-label">hours</p>
+            </div>
+
+            <div class="divider">
+                <div class="divider-dot"></div>
+                <div class="divider-dot"></div>
+            </div>
+
+            <div class="digit">
+                <div class="number">
+                    <p class="timer-text" id="minutes">48</p>
+                </div>
+                <p class="timer-label">minutes</p>
+            </div>
+
+            <div class="divider" id="timer-collapse">
+                <div class="divider-dot"></div>
+                <div class="divider-dot"></div>
+            </div>
+
+            <div class="digit" id="timer-collapse">
+                <div class="number">
+                    <p class="timer-text" id="seconds">32</p>
+                </div>
+                <p class="timer-label">seconds</p>
+            </div>
+        </div>
+
+        <div id="timeline-header">
+            <div class="section-header">
+                <p class="section-subtitle">Important Dates.</p>
+                <p class="section-description" id="timeline-description">Below are the key dates to know leading up to the event.</p>
+            </div>
+        </div>
+
+        <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+            <div class="timeline">
+                <div class="timeline-item completed">
+                    <div class="timeline-icon">
+                        <svg class="timeline-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 19.9316">
+                            <g>
+                                <rect height="19.9316" opacity="0" width="20.2832" x="0" y="0"/>
+                                <path d="M9.96094 19.9219C15.459 19.9219 19.9219 15.459 19.9219 9.96094C19.9219 4.46289 15.459 0 9.96094 0C4.46289 0 0 4.46289 0 9.96094C0 15.459 4.46289 19.9219 9.96094 19.9219ZM9.96094 18.2617C5.37109 18.2617 1.66016 14.5508 1.66016 9.96094C1.66016 5.37109 5.37109 1.66016 9.96094 1.66016C14.5508 1.66016 18.2617 5.37109 18.2617 9.96094C18.2617 14.5508 14.5508 18.2617 9.96094 18.2617Z"/>
+                                <path d="M8.88672 14.5996C9.20898 14.5996 9.48242 14.4434 9.67773 14.1406L14.1406 7.11914C14.248 6.92383 14.375 6.70898 14.375 6.49414C14.375 6.05469 13.9844 5.77148 13.5742 5.77148C13.3301 5.77148 13.0859 5.92773 12.9004 6.21094L8.84766 12.7148L6.92383 10.2246C6.68945 9.91211 6.47461 9.83398 6.20117 9.83398C5.78125 9.83398 5.44922 10.1758 5.44922 10.6055C5.44922 10.8203 5.53711 11.0254 5.67383 11.2109L8.05664 14.1406C8.30078 14.4629 8.56445 14.5996 8.88672 14.5996Z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    
+                    <div class="card" id="timeline-card">
+                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Venue and Date Reveal</p>
+                        <p class="card-text tt timeline-text">The event date and venue are now confirmed.</p>
+
+                        <div class="timeline-card-date">
+                            <p class="timeline-card-date-text">TBD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item next">
+                    <div class="timeline-icon">
+                        <svg class="timeline-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 19.9316">
+                            <g>
+                                <rect height="19.9316" opacity="0" width="24.0651" x="0" y="0"/>
+                                <path d="M11.8568 19.9219C17.3548 19.9219 21.8177 15.459 21.8177 9.96094C21.8177 4.46289 17.3548 0 11.8568 0C6.35874 0 1.89585 4.46289 1.89585 9.96094L3.55601 9.96094C3.55601 5.37109 7.26694 1.66016 11.8568 1.66016C16.4466 1.66016 20.1576 5.37109 20.1576 9.96094C20.1576 14.5508 16.4466 18.2617 11.8568 18.2617C9.08335 18.2617 6.61265 16.8945 5.13804 14.8242C4.8353 14.4238 4.37632 14.2969 3.96616 14.541C3.57554 14.7852 3.45835 15.332 3.79038 15.7617C5.59702 18.291 8.55601 19.9219 11.8568 19.9219ZM0.694677 8.07617C-0.00844799 8.07617-0.184229 8.55469 0.19663 9.10156L2.38413 12.207C2.7064 12.6562 3.17515 12.6465 3.48765 12.207L5.66538 9.0918C6.04624 8.55469 5.86069 8.07617 5.1771 8.07617Z"/>
+                                <path d="M11.8568 4.24805C11.4076 4.24805 11.0462 4.59961 11.0462 5.04883L11.0462 10.5664C11.0462 10.8008 11.1244 10.9961 11.2904 11.2207L13.6537 14.3359C13.9955 14.7852 14.474 14.8535 14.8841 14.5703C15.2455 14.3164 15.2845 13.8281 14.9818 13.4082L11.7689 9.0625L12.6576 11.7871L12.6576 5.04883C12.6576 4.59961 12.2962 4.24805 11.8568 4.24805Z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    
+                    <div class="card" id="timeline-card">
+                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Registration Opens</p>
+                        <p class="card-text tt timeline-text">Teams can begin signing up for the event.</p>
+
+                        <div class="timeline-card-date">
+                            <p class="timeline-card-date-text">10-31-25</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item upcoming">
+                    <div class="timeline-icon">
+                        <svg class="timeline-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 19.9316">
+                            <g>
+                                <rect height="19.9316" opacity="0" width="20.2832" x="0" y="0"/>
+                                <path d="M9.96094 19.9219C15.459 19.9219 19.9219 15.459 19.9219 9.96094C19.9219 4.46289 15.459 0 9.96094 0C4.46289 0 0 4.46289 0 9.96094C0 15.459 4.46289 19.9219 9.96094 19.9219ZM9.96094 18.2617C5.37109 18.2617 1.66016 14.5508 1.66016 9.96094C1.66016 5.37109 5.37109 1.66016 9.96094 1.66016C14.5508 1.66016 18.2617 5.37109 18.2617 9.96094C18.2617 14.5508 14.5508 18.2617 9.96094 18.2617Z"/>
+                                <path d="M9.95117 11.7188C10.4102 11.7188 10.6836 11.4551 10.6934 10.9473L10.8398 5.79102C10.8496 5.29297 10.459 4.92188 9.94141 4.92188C9.41406 4.92188 9.04297 5.2832 9.05273 5.78125L9.17969 10.9473C9.18945 11.4453 9.46289 11.7188 9.95117 11.7188ZM9.95117 14.8926C10.5078 14.8926 10.9961 14.4434 10.9961 13.877C10.9961 13.3105 10.5176 12.8613 9.95117 12.8613C9.375 12.8613 8.89648 13.3203 8.89648 13.877C8.89648 14.4336 9.38477 14.8926 9.95117 14.8926Z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    
+                    <div class="card" id="timeline-card">
+                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Registration Deadline</p>
+                        <p class="card-text tt timeline-text">Final day to register and lock in your team.</p>
+
+                        <div class="timeline-card-date">
+                            <p class="timeline-card-date-text">11-20-25</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item upcoming">
+                    <div class="timeline-icon">
+                        <svg class="timeline-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 19.9316">
+                            <g>
+                                <rect height="19.9316" opacity="0" width="20.2832" x="0" y="0"/>
+                                <path d="M9.96094 19.9219C15.459 19.9219 19.9219 15.459 19.9219 9.96094C19.9219 4.46289 15.459 0 9.96094 0C4.46289 0 0 4.46289 0 9.96094C0 15.459 4.46289 19.9219 9.96094 19.9219ZM9.96094 18.2617C5.37109 18.2617 1.66016 14.5508 1.66016 9.96094C1.66016 5.37109 5.37109 1.66016 9.96094 1.66016C14.5508 1.66016 18.2617 5.37109 18.2617 9.96094C18.2617 14.5508 14.5508 18.2617 9.96094 18.2617Z"/>
+                                <path d="M9.95117 11.7188C10.4102 11.7188 10.6836 11.4551 10.6934 10.9473L10.8398 5.79102C10.8496 5.29297 10.459 4.92188 9.94141 4.92188C9.41406 4.92188 9.04297 5.2832 9.05273 5.78125L9.17969 10.9473C9.18945 11.4453 9.46289 11.7188 9.95117 11.7188ZM9.95117 14.8926C10.5078 14.8926 10.9961 14.4434 10.9961 13.877C10.9961 13.3105 10.5176 12.8613 9.95117 12.8613C9.375 12.8613 8.89648 13.3203 8.89648 13.877C8.89648 14.4336 9.38477 14.8926 9.95117 14.8926Z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    
+                    <div class="card" id="timeline-card">
+                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Event Day</p>
+                        <p class="card-text tt timeline-text">It’s here! Theme reveal, hackathon, judging, and awards.</p>
+
+                        <div class="timeline-card-date">
+                            <p class="timeline-card-date-text">TBD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="stay-updated-section">
+            <div class="card" id="subscribe-card">
+                <p class="card-title" id="subscribe-card-title">Stay in the Loop</p>
+                <p class="card-text">Want to be the first to know when registration opens or when we announce our venue and date? Follow our progress and get updates on all the exciting details!</p>
+
+                <form class="subscribe-form">
+                    <input class="text-input" type="text" placeholder="Enter your email for updates" />
+                    <button type="submit" class="button-filled" id="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </section>
+
+    <!-- Sponsors Page -->
+    <section class="sponsors-section" id="sponsors-section">
+         <div class="section-header">
+            <p class="section-title">Partner With <span class="gradient-text">Orange Jam</span>.</p>
+            <p class="section-description">Join us in empowering Central Florida’s next generation of game developers and programmers. Your support directly makes this event possible and helps students to innovate, learn, and explore.</p>
+        </div>
+
+        <div class="sponsor-tiers">
+            <div class="card" id="sponsor-card">
+                <table class="tier-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <div class="header"></div>
+                                    <div class="header-logo-cont">
+                                        <div class="header-logo-bg"><img class="header-logo logo-image-black" id="header-logo-lightning" src="./static/icons/icons8-lightning-48.png"></img></div>
+                                    </div>
+                                
+                                    <div class="header-text">
+                                        <p class="header-title">Bronze Sponsor</p>
+                                        <p class="header-subtitle">$500+</p>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="header"></div>
+                                    <div class="header-logo-cont">
+                                        <div class="header-logo-bg"><img class="header-logo logo-image-black" src="./static/icons/icons8-gift-48.png"></img></div>
+                                    </div>
+                                
+                                    <div class="header-text">
+                                        <p class="header-title">Silver Sponsor</p>
+                                        <p class="header-subtitle">$1000+</p>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="header"></div>
+                                    <div class="header-logo-cont">
+                                        <div class="header-logo-bg"><img class="header-logo logo-image-black" id="header-logo-buildings" src="./static/icons/icons8-city-buildings-48.png"></img></div>
+                                    </div>
+                                
+                                    <div class="header-text">
+                                        <p class="header-title">Gold Sponsor</p>
+                                        <p class="header-subtitle">$1500+</p>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="feature">Logo on Website</td>
+
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Social Media Mention</td>
+
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Logo on Merchandise</td>
+
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Featured in Emails/Comms</td>
+
+                            <td></td>
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                        <tr>
+                            <td class="feature">Event Mentions</td>
+
+                            <td><div class="row-entry"><p class="row-text"></p></div></td>
+                            <td><div class="row-entry"><p class="row-text">1-2</p></div></td>
+                            <td><div class="row-entry"><p class="row-text">3+</p></div></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Event Banner Display Opportunity</td>
+
+                            <td></td>
+                            <td></td>
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Priority Logo Placement</td>
+
+                            <td></td>
+                            <td></td>
+                            <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cards" id="sponsor-card-mobile">
+                <div class="card" id="sponsor-card-mobile-card">
+                   <div class="header" id="card-header">
+                        <div class="header-logo-cont">
+                            <div class="header-logo-bg"><img class="header-logo logo-image-black" id="header-logo-lightning" src="./static/icons/icons8-lightning-48.png"></img></div>
+                        </div>
+                    
+                        <div class="header-text" id="sponsor-card-header-text">
+                            <p class="header-title">Bronze Sponsor</p>
+                            <p class="header-subtitle">$500+</p>
+                        </div>
+                    </div>
+
+                    <table class="sponsor-card-table">
+                        <tbody>
+                            <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Logo on Website</td>
+                            </tr>
+                             <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Social Media Mention</td>
+                            </tr>
+                             <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Logo on Merchandise</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card" id="sponsor-card-mobile-card">
+                    <div class="header" id="card-header">
+                        <div class="header-logo-cont">
+                            <div class="header-logo-bg"><img class="header-logo logo-image-black" src="./static/icons/icons8-gift-48.png"></img></div>
+                        </div>
+                    
+                        <div class="header-text" id="sponsor-card-header-text">
+                            <p class="header-title">Silver Sponsor</p>
+                            <p class="header-subtitle">$1000+</p>
+                        </div>
+                    </div>
+
+                    <table class="sponsor-card-table">
+                        <tbody>
+                            <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Logo on Website</td>
+                            </tr>
+                            <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Social Media Mention</td>
+                            </tr>
+                            <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Logo on Merchandise</td>
+                            </tr>
+                            <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Featured in Emails/Comms</td>
+                            </tr>
+                             <tr>
+                                <td><div class="row-entry"><p class="row-text">1-2</p></div></td>
+                                <td class="feature">Event Mentions</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card" id="sponsor-card-mobile-card">
+                    <div class="header" id="card-header">
+                        <div class="header-logo-cont">
+                            <div class="header-logo-bg"><img class="header-logo logo-image-black" id="header-logo-buildings" src="./static/icons/icons8-city-buildings-48.png"></img></div>
+                        </div>
+                    
+                        <div class="header-text" id="sponsor-card-header-text">
+                            <p class="header-title">Gold Sponsor</p>
+                            <p class="header-subtitle">$1500+</p>
+                        </div>
+                    </div>
+
+                    <table class="sponsor-card-table">
+                        <tbody>
+                            <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Logo on Website</td>
+                            </tr>
+                            <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Social Media Mention</td>
+                            </tr>
+                            <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Logo on Merchandise</td>
+                            </tr>
+                            <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Featured in Emails/Comms</td>
+                            </tr>
+                            <tr>
+                                <td><div class="row-entry"><p class="row-text">3+</p></div></td>
+                                <td class="feature">Event Mentions</td>
+                            </tr>
+                            <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Event Banner Display Opportunity</td>
+                            </tr>
+                            <tr>
+                                <td><div class="row-entry"><div class="check"><svg class="table-check-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.1875 17.2363"><g><rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/><path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/></g></svg></div></div></td>
+                                <td class="feature">Priority Logo Placement</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="sponsor-contact-us">
+            <div class="section-header">
+                <p class="section-subtitle">Ready to Make an Impact?</p>
+                <p class="section-description" id="timeline-description">Let's discuss how your organization can help shape the future of programming and tech.</p>
+            </div>
+
+            <a href="#contact-section"><button class="button-filled" id="sponsor-contact-us-btn">Contact Us About Sponsorship</button></a>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section class="contact-section" id="contact-section last-section">
+        <div class="section-header">
+            <p class="section-title">Let's <span class="gradient-text">Connect</span>.</p>
+            <p class="section-description">Ready to sponsor, join, or learn more about The Orange Game Jam? We'd love to hear from you see how you can get involved.</p>
+        </div>
+
+        <div class="contact-main-grid">
+            <div id="column-left">
+                <div class="card" id="send-msg-card">
+                    <div class="msg-card-header" id="msg-card-header-form">
+                        <svg version="1.1" class="msg-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.4082 22.373">
+                            <g>
+                                <rect height="22.373" opacity="0" width="28.4082" x="0" y="0"/>
+                                <path d="M21.5234 4.50195L21.5234 4.96094L19.9512 4.96094L19.9512 4.51172C19.9512 2.60742 19.0137 1.60156 17.0508 1.60156L4.47266 1.60156C2.5 1.60156 1.57227 2.60742 1.57227 4.51172L1.57227 11.9824C1.57227 13.8867 2.5 14.8828 4.47266 14.8828L5.67383 14.8828C6.20117 14.8828 6.40625 15.0879 6.40625 15.625L6.40625 18.4473L9.53125 15.3516C9.82482 15.0503 10.0573 14.9323 10.4129 14.8965C10.4395 15.5016 10.545 16.0381 10.7281 16.5026L7.41211 19.4629C6.81641 19.9805 6.48438 20.2344 6.00586 20.2344C5.32227 20.2344 4.94141 19.7559 4.94141 19.0039L4.94141 16.4551L4.47266 16.4551C1.5625 16.4551 0 14.8535 0 11.9922L0 4.50195C0 1.64062 1.5625 0.0292969 4.47266 0.0292969L17.0508 0.0292969C19.9609 0.0292969 21.5234 1.64062 21.5234 4.50195Z"/>
+                                <path d="M15.7227 10.8594L22.793 10.8594C23.2129 10.8594 23.5254 10.5469 23.5254 10.1367C23.5254 9.7168 23.2129 9.4043 22.793 9.4043L15.7227 9.4043C15.293 9.4043 14.9902 9.7168 14.9902 10.1367C14.9902 10.5469 15.293 10.8594 15.7227 10.8594ZM15.7227 14.4727L20.8984 14.4727C21.3086 14.4727 21.6406 14.1797 21.6406 13.7598C21.6406 13.3496 21.3086 13.0176 20.8984 13.0176L15.7227 13.0176C15.293 13.0176 14.9902 13.3496 14.9902 13.7598C14.9902 14.1797 15.293 14.4727 15.7227 14.4727ZM14.6875 18.8086L17.8516 18.8086L21.1133 21.6016C21.709 22.1094 22.0312 22.373 22.5 22.373C23.1738 22.373 23.5547 21.8945 23.5547 21.1523L23.5547 18.8086L23.7598 18.8086C26.5723 18.8086 28.0469 17.2949 28.0469 14.5312L28.0469 9.24805C28.0469 6.47461 26.5723 4.96094 23.7598 4.96094L14.6875 4.96094C11.875 4.96094 10.4004 6.47461 10.4004 9.24805L10.4004 14.5312C10.4004 17.3047 11.875 18.8086 14.6875 18.8086ZM14.7168 17.2363C12.8027 17.2363 11.9824 16.3379 11.9824 14.5117L11.9824 9.26758C11.9824 7.44141 12.8027 6.5332 14.7168 6.5332L23.7402 6.5332C25.6445 6.5332 26.4746 7.44141 26.4746 9.26758L26.4746 14.502C26.4746 16.3379 25.6445 17.2363 23.7402 17.2363L22.8418 17.2363C22.4219 17.2363 22.0898 17.4902 22.0898 18.0371L22.0898 20.5957L18.7891 17.6465C18.4668 17.3438 18.1934 17.2363 17.793 17.2363Z"/>
+                            </g>
+                        </svg>
+
+                        <p class="msg-header-text" id="msg-header-text-form">Send us a Message</p>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="inline-fields">
+                            <div class="field">
+                                <label for="name">Name</label>
+                                <input class="text-input-form" type="text" name="name" placeholder="Your name"/>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input class="text-input-form" type="text" name="email" placeholder="your@email.com"/>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="organization">Organization</label>
+                            <input class="text-input-form" type="text" name="organization" placeholder="Company or school name"/>
+                        </div>
+                        <div class="field">
+                            <label for="interest">Interest</label>
+                            <select class="text-input-form" id="interest-dropdown" name="interest">
+                                <option value="sponsorship">Sponsorship Opportunities</option>
+                                <option value="registration">Registration</option>
+                                <option value="event_rules">Event/Rules</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea class="text-input-form" name="message" placeholder="Tell us about your interest in The Orange Game Jam..."></textarea>
+                        </div>
+
+                        <button type="submit" class="button-filled" id="send-msg-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="column-right">
+                 <div class="card" id="send-msg-card">
+                    <div class="msg-card-header">
+                        <div class="header-logo-cont">
+                            <div class="header-logo-bg"><img class="header-logo logo-image-black" id="header-logo-buildings" src="./static/icons/icons8-email-48.png"></img></div>
+                        </div>
+
+                        <div class="header-text">
+                            <p class="msg-header-text">Email Us</p>
+                            <p class="msg-header-subtext">For sponsorship inquiries and general questions.</p>
+                            <p class="msg-header-highlight">contact.orangejam@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="send-msg-card">
+                    <div class="msg-card-header">
+                        <div class="header-logo-cont">
+                            <div class="header-logo-bg"><img class="header-logo logo-image-black" src="./static/icons/icons8-plus-24.png"></img></div>
+                        </div>
+
+                        <div class="header-text">
+                            <p class="msg-header-text">Follow Us on Social Media</p>
+                            <p class="msg-header-subtext">Stay up to date with our latest news: date, registration, venue info, and more!</p>
+                            <p class="msg-header-highlight">@OrangeGameJam</p>
+
+                            <div class="social-media-links">
+                                <a><img class="social-media-logo" src="./static/icons/icons8-facebook-50.png"></a>
+                                <div class="social-media-item"><div class="white-dot"></div></div>
+                                <a><img class="social-media-logo" src="./static/icons/icons8-linkedin-50.png"></a>
+                                <div class="social-media-item"><div class="white-dot"></div></div>
+                                <a><img class="social-media-logo" id="instagram-logo" src="./static/icons/icons8-instagram-50.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="send-msg-card">
+                    <div class="msg-card-header">
+                        <div class="header-logo-cont">
+                            <div class="header-logo-bg"><img class="header-logo logo-image-black" id="header-logo-buildings" src="./static/icons/icons8-address-48-black.png"></img></div>
+                        </div>
+
+                        <div class="header-text">
+                            <p class="msg-header-text">Location</p>
+                            <p class="msg-header-subtext">Central Florida region</p>
+                            <p class="msg-header-highlight">Venue TBD - Stay tuned!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Page -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">© 2024 The Orange Game Jam | <a class="policy-link" href="">Privacy Policy</a></p>
+            <p class="footer-text">Designed and Developed by HoloStudios</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+/* Responsive layout */
+
+/* DESKTOP: */
+@media (min-width: 1024px) {
+
+}
+
+/* TABLET: */
+@media (max-width: 1023px) and (min-width: 768px) {
+
+}
+
+/* MOBILE: */
+@media (max-width: 767px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    
+    .footer-text:nth-of-type(2) {
+        margin-top: 0.25rem;
+    }
+}
+
+/*
+--------------
+FOOTER SECTION 
+--------------
+*/
+
+.footer {
+    position: relative;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 0rem 5rem;
+
+    background-color: rgb(20, 20, 20);
+    
+    border-top: 1px solid;
+    border-color: var(--border);
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-text {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.policy-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+}
+
+.policy-link:hover {
+  color: var(--action-primary);
+}

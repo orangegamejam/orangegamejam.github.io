@@ -1,0 +1,282 @@
+/* Responsive layout */
+
+/* DESKTOP: */
+@media (min-width: 1024px) {
+    :root {
+        --column-width: 40vw;
+    }
+}
+
+/* TABLET: */
+@media (max-width: 1023px) and (min-width: 768px) {
+    :root {
+        --column-width: 65vw;
+    }
+
+    .contact-main-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    #column-right {
+        justify-content: center !important;
+        gap: 1.5rem !important;
+    }
+}
+
+/* MOBILE: */
+@media (max-width: 767px) {
+    :root {
+        --column-width: 75vw !important;
+    }
+
+    .contact-main-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .inline-fields {
+        flex-direction: column !important;
+    }
+
+    .msg-header-text {
+        font-size: 1.25rem !important;
+    }
+
+    #column-right {
+        justify-content: center !important;
+        gap: 1.5rem !important;
+    }
+}
+
+/*
+--------------
+CONTACT SECTION 
+--------------
+*/
+
+.contact-section {
+    margin-bottom: 3rem;
+    padding: var(--section-padding-vertical) var(--section-padding-horizontal);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#last-section {
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+}
+
+/* GRID LAYOUT */
+.contact-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+
+    margin-top: 4rem;
+    padding: 0 1rem;
+}
+
+#column-left {
+    width: var(--column-width);
+}
+
+#column-right {
+    width: var(--column-width);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* GRID CONTENTS */
+
+/* Send message */
+#send-msg-card {
+    background-image: none;
+    background-color: rgba(30, 30, 30, 0.1);
+
+    align-items: flex-start;
+    padding: 1rem;
+    padding-left: 1.5rem;
+}
+
+.msg-logo {
+    width: 1.6rem;
+    height: 1.6rem;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    fill: var(--action-primary);
+}
+
+.msg-header-text {
+    font-size: 1.5rem;
+    color: var(--text-primary); 
+    font-weight: var(--weight-bold);
+
+    display: inline-block;
+    vertical-align: middle;
+
+    margin: 0.5rem;
+}
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.125rem;
+
+    margin-top: 1rem;
+
+    width: 100%;
+}
+
+.inline-fields {
+    display: flex;
+    gap: 1rem;
+
+    width: 100%;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inline-fields .field {
+  flex: 1;
+}
+
+label {
+    color: var(--text-primary);
+    font-size: 0.8rem;
+
+    margin-bottom: 0.375rem;
+}
+
+.text-input-form {
+    height: 2.8rem;
+
+    border: 1px solid;
+    border-color: var(--bg-tertiary);
+    border-radius: 4px;
+
+    background-color: #000000;
+    color: var(--text-primary);
+
+    padding-left: 1rem;
+}
+
+#send-msg-btn {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#interest-dropdown {
+    background-color: #000000;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="12" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1.25rem;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    color: var(--text-primary);
+}
+
+textarea {
+    font-family: "Inter", sans-serif;
+    padding-top: 0.5rem;
+
+    overflow: hidden;
+    resize: vertical;
+}
+
+/* SIDE CARDS */
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: left;
+}
+
+.header-text p {
+    margin: 0;
+}
+
+.msg-header-subtext {
+    margin-top: 1rem;
+
+    color: var(--text-secondary);
+}
+
+#msg-card-header-form {
+    align-items: center;
+}
+
+.msg-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#msg-header-text-form {
+    margin: 0rem !important;
+    padding: 0rem !important;
+}
+    
+.msg-header-text {
+    margin-bottom: 1rem !important;
+}
+
+.msg-header-subtext {
+    margin-bottom: 0.5rem !important;
+}
+
+.msg-header-highlight {
+    font-weight: var(--weight-bold);
+    color: var(--action-primary);
+}
+
+.social-media-links{
+    display: flex;
+    gap: 0.25rem;
+    
+    align-items: center;
+
+    margin-top: 0.75rem;
+}
+
+.social-media-logo {
+    width: 2rem;
+    height: 2rem;
+}
+
+.white-dot {
+    background-color: var(--text-primary);
+
+    height: 2px;
+    width: 2px;
+}
+
+.social-media-item {
+    display: flex;
+    align-items: center;
+}
+
+#instagram-logo {
+    padding-left: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}

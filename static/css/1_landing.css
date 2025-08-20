@@ -1,0 +1,385 @@
+/* DESKTOP: */
+@media (min-width: 1024px) {
+    .landing-section {
+        padding-top: 10vh !important;
+    }
+}
+
+/* TABLET: */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .nav-links {
+        display: none !important;
+    }
+
+    .hamburger {
+      display: flex !important;
+    }
+
+    .landing-section {
+        padding-top: 8vh !important;
+    }
+}
+
+/* MOBILE: */
+@media (max-width: 767px) {
+    .long {
+        display: none !important;
+    }
+
+    .short {
+        display: inline !important;
+    }
+
+    .nav-links {
+        display: none !important;
+    }
+
+    .hamburger {
+      display: flex !important;
+    }
+
+    #nav-btn {
+        display: none !important;
+    }
+
+    .landing-section {
+        padding-top: 6vh !important;
+    }
+
+    .landing-title-left {
+        display: none !important;
+    }
+
+    .landing-cards {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    #landing-card {
+        height: 10rem;
+        width: 80% !important;
+        max-width: 320px !important;
+    }
+    
+    .landing-actions {
+        flex-direction: column !important;
+    }
+
+    #landing-action-btn {
+        width: 75vw !important;
+    }
+}
+
+.short {
+    display: none !important;
+}
+
+.long {
+    display: inline !important;
+}
+
+/*
+--------------
+NAVIGATION BAR 
+--------------
+*/
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 7.5vh;
+    height: auto;
+    padding: 1rem 2rem;
+
+    background-color: rgba(12, 13, 1, 0.08);
+
+    border-bottom: 1px solid transparent;
+    border-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)) 1;
+
+    backdrop-filter: blur(16px);
+    z-index: 2;
+}
+
+/* Left navbar */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#nav-logo {
+    height: 1.75rem;
+    vertical-align: middle;
+
+    margin-right: 4px;
+}
+
+#nav-logo-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Middle navbar */
+.nav-middle {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+
+    padding: 0.65rem 4vw;
+
+    background-color: rgba(255, 255, 255, 0.02);
+
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.08);
+    border-radius: 100px;
+
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.04);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    transition: 0.1s;
+}
+
+.nav-links a:hover {
+    color: var(--action-primary);
+}
+
+/* Right navbar */
+.nav-right {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem; 
+}
+
+#nav-btn {
+    padding: 0.65rem 1.5rem;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+/*
+-------------
+LANDING PAGE
+-------------
+*/
+
+.landing-section {
+    margin-top: calc(7.5vh + 2rem);
+    margin-bottom: var(--section-spacing);
+    padding: var(--section-padding-vertical) var(--section-padding-horizontal) var(--section-padding-vertical) var(--section-padding-horizontal);
+
+    box-sizing: border-box
+}
+
+/* TITILE */
+.landing-title {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+
+    padding: 0 1rem;
+}
+
+/* Title left */
+.landing-title-left {
+    display: flex;
+}
+
+#landing-logo {
+    width: auto;
+    display: block;
+
+    object-fit: contain;
+}
+
+/* Title right */
+.landing-title-right {
+    max-width: 500px;
+}
+
+.title-text {
+    font-weight: var(--weight-black);
+    font-size: 4rem;
+
+    line-height: 1.1;
+
+    margin: 0rem 0rem 1.5rem 0rem;
+}
+
+.title-subtext {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    font-weight: var(--weight-medium);
+
+    margin-bottom: 0rem;
+}
+
+/* CARD DESCRIPTION */
+#landing-cards {
+    margin-top: 3rem;
+}
+
+#landing-card {
+    height: 9.5rem;
+    width: 13rem;
+}
+
+/* Card content */
+.landing-cards-logo {
+    margin-bottom: 1rem;
+
+    width: 40px;
+    height: 40px;
+}
+
+/* ACTION BUTTONS */
+.landing-actions {
+    margin-top: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.25rem;
+}
+
+#landing-action-btn {
+    padding: 1.25rem 2rem;
+}
+
+.row-text {
+    color: var(--text-primary);
+    padding: 0.2rem 0rem;
+}
+
+/* HAMBURGER DROPDOWN */
+.hamburger-dropdown {
+    display: flex;
+    gap: 1rem;
+
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-primary);
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+
+    height: 0;
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.hamburger-dropdown.active {
+    height: 10rem;
+    padding: 2rem 0;
+}
+
+.hamburger-dropdown a {
+    color: white;
+    text-decoration: none;
+
+    transition: 0.1s;
+}
+
+.hamburger-dropdown a:hover {
+    color: var(--action-primary);
+}
+.hamburger:hover div {
+    background-color: var(--action-primary);
+}
+
+/* NOTIFICATION SYSTEM */
+.notification {
+    padding: 0rem 2rem;
+
+    background-color: var(--success-secondary);
+
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.08);
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    transition: background-color 0.25s;
+}
+
+.notification:hover {
+    background-color: rgb(31, 171, 90);
+}
+
+.notification svg {
+  width: 0.75rem;
+  height: 0.75rem;
+
+  fill: var(--text-primary);
+}
+
+.notification-container {
+    position: fixed;
+    top: -5rem;
+    left: 0px;
+    right: 0px;
+
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+}
+
+.notification-container-animation {
+    animation: slide-in 1.25s ease-in-out;
+}
+
+@keyframes slide-in {
+    20% {
+        top: 1rem;
+    }
+
+    80% {
+        top: 1rem;
+    }
+
+    100% {
+        top: -5rem;
+    }
+}

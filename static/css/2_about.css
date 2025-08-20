@@ -1,0 +1,79 @@
+/* Responsive layout */
+
+/* DESKTOP: */
+@media (min-width: 1024px) {
+    
+}
+
+/* TABLET: */
+@media (max-width: 1023px) and (min-width: 768px) {
+
+}
+
+/* MOBILE: */
+@media (max-width: 767px) {
+    #about-card {
+        height: 10rem;
+        width: 80% !important;
+        max-width: 320px !important;
+    }
+}
+
+/*
+--------------
+ABOUT SECTION 
+--------------
+*/
+
+.about-section {
+    margin-bottom: var(--section-spacing);
+    padding: var(--section-padding-vertical) var(--section-padding-horizontal);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+/* CARD DESCRIPTIONS */
+#about-cards {
+    margin-top: 3rem;
+    gap: 1.5rem;
+}
+
+#about-card {
+    height: auto;
+    width: 10rem;
+
+    background-image: none;
+    border: none;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Card logo */
+.about-cards-logo-bg {
+    width: 65px;
+    height: 65px;
+
+    background-image: linear-gradient(to bottom right, var(--action-primary), var(--action-secondary));
+    margin-bottom: 1rem;
+
+    border-radius: 100px;
+
+    position: relative;
+}
+
+.about-cards-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 30px;
+    height: 30px;
+}
+
+.logo-image-black {
+    opacity: 0.80;
+}
