@@ -222,7 +222,8 @@ LANDING PAGE
 }
 
 #landing-logo {
-    width: auto;
+    max-width: 250px;
+    height: auto;
     display: block;
 
     object-fit: contain;
