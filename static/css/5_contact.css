@@ -64,11 +64,6 @@ CONTACT SECTION
     align-items: center;
 }
 
-#last-section {
-    padding-bottom: 0rem;
-    margin-bottom: 0rem;
-}
-
 /* GRID LAYOUT */
 .contact-main-grid {
     display: grid;
@@ -277,7 +272,7 @@ textarea {
     align-items: center;
 }
 
-#instagram-logo {
+#shrink-logo {
     padding-left: 0.25rem;
     width: 1.5rem;
     height: 1.5rem;
