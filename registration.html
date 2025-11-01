@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Orange Jam</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./static/css/0_base.css">
+    <link rel="stylesheet" href="./static/css/1_landing.css">
+    <link rel="stylesheet" href="./static/css/2_about.css">
+    <link rel="stylesheet" href="./static/css/3_registration.css">
+    <link rel="stylesheet" href="./static/css/4_sponsors.css">
+    <link rel="stylesheet" href="./static/css/5_contact.css">
+    <link rel="stylesheet" href="./static/css/6_footer.css">
+    <link rel="stylesheet" href="./static/css/registration.css">
+
+    <!-- Link Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./static/img/logo-square.png">
+</head>
+<body>
+     <!-- JS -->
+    <script type="text/javascript" src="./static/js/notify.js"></script>
+    <script type="text/javascript" src="./static/js/sidebar.js"></script>
+    <script type="text/javascript" src="./static/js/countdown.js"></script>
+    <script type="text/javascript" src="./static/js/subscribe.js"></script>
+    <script type="text/javascript" src="./static/js/sendmessage.js"></script>
+    <script type="text/javascript" src="./static/js/register.js"></script>
+
+    <!-- Landing Page -->
+    <div class="notification-container">
+        <!-- Success Notification -->
+        <div class="notification success" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.1875 17.2363">
+                <g>
+                    <rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/>
+                    <path d="M6.36719 17.2363C6.78711 17.2363 7.11914 17.0508 7.35352 16.6895L16.582 2.1582C16.7578 1.875 16.8262 1.66016 16.8262 1.43555C16.8262 0.898438 16.4746 0.546875 15.9375 0.546875C15.5469 0.546875 15.332 0.673828 15.0977 1.04492L6.32812 15.0195L1.77734 9.0625C1.5332 8.7207 1.28906 8.58398 0.9375 8.58398C0.380859 8.58398 0 8.96484 0 9.50195C0 9.72656 0.0976562 9.98047 0.283203 10.2148L5.35156 16.6699C5.64453 17.0508 5.94727 17.2363 6.36719 17.2363Z"/>
+                </g>
+            </svg>
+            <p class="notification-text">You have successfully registered!</p>
+        </div>
+
+        <!-- Failure Notification -->
+        <div class="notification failure" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.1875 17.2363">
+                <g>
+                    <rect height="17.2363" opacity="0" width="17.1875" x="0" y="0"/>
+                    <path d="M1.707 0.293a1 1 0 011.414 0L8.593 6.765l5.472-6.472a1 1 0 111.414 1.414L10.007 8.18l5.472 5.472a1 1 0 01-1.414 1.414L8.593 9.593 3.121 15.065a1 1 0 01-1.414-1.414l5.472-5.472L0.293 1.707a1 1 0 010-1.414z"/>
+                </g>
+            </svg>
+            <p class="notification-text">Registration failed. Please try again.</p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <img id="nav-logo" src="./static/img/logo.png" alt="Logo">
+            <a href="https://orangegamejam.github.io/#landing-section"><span class="gradient-text long" id="nav-logo-text">The Orange Game Jam</span></a>
+            <a href="https://orangegamejam.github.io/#landing-section"></a><span class="gradient-text short" id="nav-logo-text">Orange Jam</span></a>
+        </div>
+
+        <div class="nav-middle">
+            <div class="nav-links">
+                <a href="https://orangegamejam.github.io/#about-section">About</a>
+                <a href="https://orangegamejam.github.io/#registration-section">Registration</a>
+                <a href="https://orangegamejam.github.io/#sponsors-section">Sponsors</a>
+                <a href="https://orangegamejam.github.io/#contact-section">Contact</a>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <a href="https://orangegamejam.github.io/#sponsors-section"><button class="button-holo" id="nav-btn"><span class="gradient-text">Sponsor Us</span></button></a>
+            <a href="https://orangegamejam.github.io/registration.html"><button class="button-filled" id="nav-btn">Register Now</button></a>
+
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="hamburger-dropdown" id="hamburger-dropdown">
+            <a class="nav-link" href="https://orangegamejam.github.io/#about-section">About</a>
+            <a class="nav-link" href="https://orangegamejam.github.io/#registration-section">Registration</a>
+            <a class="nav-link" href="https://orangegamejam.github.io/#sponsors-section">Sponsors</a>
+            <a class="nav-link" href="https://orangegamejam.github.io/#contact-section">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Registration -->
+    <section class="landing-section" id="landing-section">
+         <div class="section-header">
+            <p class="section-title">Register <span class="gradient-text">Now</span>.</p>
+            <p class="section-description">Register your team for the Orange Game Jam! All members must be 18 or under to be eliegible to compete.</p>
+        </div>
+
+        <form class="register-form">
+        <div class="registration-wrapper">
+            <!-- TEAM INFORMATION CARD -->
+            <div class="card" id="registration-card">
+                <div class="registration-card-header" id="registration-card-header-form">
+                    <p class="registration-header-text" id="registration-header-text-form">Team Information</p>
+                </div>
+
+                <div class="registration-form">
+                    <div class="field">
+                        <label for="team_name">Team Name</label>
+                        <input class="text-input-form" type="text" name="team_name" placeholder="Enter your team name" required/>
+                    </div>
+
+                    <div class="inline-fields">
+                        <div class="field">
+                            <label for="division">Division</label>
+                            <select class="text-input-form" name="division" required>
+                                <option value="" disabled selected>Select division</option>
+                                <option value="novice">Novice</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="team_size">Team Size</label>
+                            <select class="text-input-form" name="team_size" required>
+                                <option value="" disabled selected>Select team size</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTICIPANT INFORMATION CARDS -->
+            <div class="card" id="registration-card">
+                <div class="registration-card-header" id="registration-card-header-form">
+                    <p class="registration-header-text" id="registration-header-text-form">Participant 1</p>
+                </div>
+
+                <div class="registration-form">
+                    <div class="inline-fields">
+                        <div class="field">
+                            <label for="participant1_name">Name</label>
+                            <input class="text-input-form" type="text" name="participant1_name" placeholder="Participant name" required/>
+                        </div>
+                        <div class="field">
+                            <label for="participant1_email">Email</label>
+                            <input class="text-input-form" type="text" name="participant1_email" placeholder="participant@email.com" required/>
+                        </div>
+                    </div>
+                    <div class="inline-fields">
+                        <div class="field">
+                            <label for="participant1_phone">Phone Number</label>
+                            <input class="text-input-form" type="text" name="participant1_phone" placeholder="xxx-xxx-xxxx" required/>
+                        </div>
+                        <div class="field">
+                            <label for="participant1_age">Age</label>
+                            <select class="text-input-form" name="participant1_age" required>
+                                <option value="" disabled selected>Select participant age</option>
+                                <option value="18">18</option>
+                                <option value="17">17</option>
+                                <option value="16">16</option>
+                                <option value="15">15</option>
+                                <option value="14">14</option>
+                                <option value="13">13</option>
+                                <option value="12">12</option>
+                                <option value="11">11</option>
+                                <option value="10">10</option>
+                                <option value="9">Less than 10</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="registration-card">
+                <div class="registration-card-header" id="registration-card-header-form">
+                    <p class="registration-header-text" id="registration-header-text-form">Participant 2</p>
+                </div>
+
+                <div class="registration-form">
+                    <div class="inline-fields">
+                        <div class="field">
+                            <label for="participant2_name">Name</label>
+                            <input class="text-input-form" type="text" name="participant2_name" placeholder="Participant name"/>
+                        </div>
+                        <div class="field">
+                            <label for="participant2_email">Email</label>
+                            <input class="text-input-form" type="text" name="participant2_email" placeholder="participant@email.com"/>
+                        </div>
+                    </div>
+                    <div class="inline-fields">
+                        <div class="field">
+                            <label for="participant2_phone">Phone Number</label>
+                            <input class="text-input-form" type="text" name="participant2_phone" placeholder="xxx-xxx-xxxx"/>
+                        </div>
+                        <div class="field">
+                            <label for="participant2_age">Age</label>
+                            <select class="text-input-form" name="participant2_age">
+                                <option value="" disabled selected>Select participant age</option>
+                                <option value="18">18</option>
+                                <option value="17">17</option>
+                                <option value="16">16</option>
+                                <option value="15">15</option>
+                                <option value="14">14</option>
+                                <option value="13">13</option>
+                                <option value="12">12</option>
+                                <option value="11">11</option>
+                                <option value="10">10</option>
+                                <option value="9">Less than 10</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="registration-card">
+                <div class="registration-card-header" id="registration-card-header-form">
+                    <p class="registration-header-text" id="registration-header-text-form">Participant 3</p>
+                </div>
+
+                <div class="registration-form">
+                    <div class="inline-fields">
+                        <div class="field">
+                            <label for="participant3_name">Name</label>
+                            <input class="text-input-form" type="text" name="participant3_name" placeholder="Participant name"/>
+                        </div>
+                        <div class="field">
+                            <label for="participant3_email">Email</label>
+                            <input class="text-input-form" type="text" name="participant3_email" placeholder="participant@email.com"/>
+                        </div>
+                    </div>
+                    <div class="inline-fields">
+                        <div class="field">
+                            <label for="participant3_phone">Phone Number</label>
+                            <input class="text-input-form" type="text" name="participant3_phone" placeholder="xxx-xxx-xxxx"/>
+                        </div>
+                        <div class="field">
+                            <label for="participant3_age">Age</label>
+                            <select class="text-input-form" name="participant3_age">
+                                <option value="" disabled selected>Select participant age</option>
+                                <option value="18">18</option>
+                                <option value="17">17</option>
+                                <option value="16">16</option>
+                                <option value="15">15</option>
+                                <option value="14">14</option>
+                                <option value="13">13</option>
+                                <option value="12">12</option>
+                                <option value="11">11</option>
+                                <option value="10">10</option>
+                                <option value="9">Less than 10</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--PAYMENT-->
+            <div class="card" id="registration-card">
+                <div class="registration-card-header" id="registration-card-header-form">
+                    <p class="registration-header-text" id="registration-header-text-form">Payment</p>
+                </div>
+
+                <p class="payment-text">To complete registration please pay registration fees <span class="gradient-text">($10)</span> using the link below. Please note that your team will not be officially registered until we have recieved your payment. If you have any questions please email: <span class="gradient-text">orangegamejam@gmail.com.</span><br><br>Payment link: <a href="https://ocps.schoolcashonline.com/Fee/Details/28559/574/False/True"><span class="link">https://ocps.schoolcashonline.com/Fee/Details/28559/574/False/True</span></a></p>
+            </div>
+
+            <!--SUBMIT-->
+            <div class="final" id="registration-card">
+                <div class="submit-form">
+                    <div class="checkbox-section">
+                        <div class="checkbox-field">
+                            <input type="checkbox" id="terms" name="payment_terms" required>
+                            <label for="payment_terms">I acknowledge that to complete registration I will have to finish payment using the following link: <a href="https://ocps.schoolcashonline.com/Fee/Details/28559/574/False/True"><span class="link">https://ocps.schoolcashonline.com/Fee/Details/28559/574/False/True</span></a> <span class="red">*</span></label>
+                        </div>
+
+                        <div class="checkbox-field">
+                            <input type="checkbox" id="privacy" name="refund_terms" required>
+                            <label for="refund_terms">I acknowledge that upon payment no refunds can be issued <span class="red">*</span></label>
+                        </div>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="form-submit">
+                       <button type="submit" class="button-filled" id="registration-submit-btn">Submit Registration</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </section>
+
+    <!-- Footer Page -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">© 2024 The Orange Game Jam | <a class="policy-link" href="privacypolicy.html">Privacy Policy</a></p>
+            <p class="footer-text">Designed and Developed by HoloStudios</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector('.contact-form');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnText = submitBtn.textContent;
 
   form.addEventListener('submit', e => {
     e.preventDefault();
@@ -11,11 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const interest = form.querySelector('select[name="interest"]').value;
     const message = form.querySelector('textarea[name="message"]').value;
 
-    // Reset form
-    form.reset();
-
-    // Show notification
-    showNotification("Message sent successfully!");
+    // Show loading spinner
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `<span class="spinner"></span> Sending...`;
 
     // Send all fields to Google Apps Script
     fetch('https://script.google.com/macros/s/AKfycbwliBhu-15LLEsxspfZoGPyVun7ypqxvu9bbLI3bC6ZmXUyiPYzDBTvqS9dIlfmizzXYw/exec', {
@@ -29,7 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
     .then(response => response.text())
-    .then(data => console.log("Success:", data))
-    .catch(err => console.error("Error:", err));
+    .then(data => {
+      showNotification("Message sent successfully!");
+      form.reset();
+    })
+    .catch(err => {
+      console.error("Error:", err);
+      showNotification("Failed to send message. Please try again.");
+    })
+    .finally(() => {
+      // Restore button
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    });
   });
 });

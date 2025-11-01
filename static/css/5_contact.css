@@ -1,11 +1,6 @@
 /* Responsive layout */
 
 /* DESKTOP: */
-@media (min-width: 1024px) {
-    :root {
-        --column-width: 40vw;
-    }
-}
 
 /* TABLET: */
 @media (max-width: 1023px) and (min-width: 768px) {

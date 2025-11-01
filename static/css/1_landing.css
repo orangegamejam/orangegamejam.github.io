@@ -373,6 +373,23 @@ LANDING PAGE
     animation: slide-in 1.25s ease-in-out;
 }
 
+.notification.failure {
+    background-color: #ff6b6b;
+    border-color: rgba(255, 107, 107, 0.5);
+}
+
+.notification.failure:hover {
+    background-color: #ff4c4c;
+}
+
+.notification.failure svg {
+    fill: #fff;
+}
+
+.notification.success svg {
+    fill: #fff;
+}
+
 @keyframes slide-in {
     20% {
         top: 1rem;

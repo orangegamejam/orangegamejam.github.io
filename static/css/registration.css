@@ -1,0 +1,121 @@
+.registration-wrapper {
+    position: relative;
+    margin-top: 2.5rem;
+
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#registration-card {
+    background-image: none;
+    background-color: rgba(30, 30, 30, 0.1);
+
+    align-items: flex-start;
+    padding: 1rem;
+    padding-left: 1.5rem;
+}
+
+.first-field {
+    margin-bottom: 1rem;
+}
+
+#registration-card:nth-child(n+2) {
+    margin-top: 2rem;
+}
+
+#registration-card-header-form {
+    align-items: center;
+}
+
+.registration-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.registration-header-text {
+    font-size: 1.5rem;
+    color: var(--text-primary); 
+    font-weight: var(--weight-bold);
+
+    display: inline-block;
+    vertical-align: middle;
+
+    margin: 0.5rem;
+}
+
+#registration-header-text-form {
+    margin: 0rem !important;
+    padding: 0rem !important;
+}
+
+label:has(+ input[required]),
+label:has(+ select[required]),
+label:has(+ textarea[required]) {
+  position: relative;
+}
+
+label:has(+ input[required])::after,
+label:has(+ select[required])::after,
+label:has(+ textarea[required])::after {
+  content: " *";
+  color: red;
+}
+
+.registration-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.125rem;
+
+    margin-top: 1rem;
+
+    width: 100%;
+}
+
+.submit-form {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    gap: 1.125rem;
+
+    margin-top: 1rem;
+
+    width: 100%;
+}
+
+.final {
+    background-image: none;
+    background-color: rgba(30, 30, 30, 0) !important;
+    background-image: none !important;
+
+    align-items: flex-start;
+    padding: 1rem;
+    padding-left: 1.5rem;
+
+    margin-top: 0rem !important;
+}
+
+#registration-submit-btn {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    width: 20%;
+}
+
+.red {
+    color: red;
+}
+
+.link {
+    color: #1E90FF;
+    text-decoration: underline;
+}
+
+.payment-text {
+    color: var(--text-secondary);
+    text-align: left;
+
+    margin-top: 0.5rem;
+}

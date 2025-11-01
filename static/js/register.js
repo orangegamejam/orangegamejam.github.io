@@ -1,0 +1,78 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector('.register-form');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnText = submitBtn.textContent;
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // Show loading spinner
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `<span class="spinner"></span> Sending...`;
+
+    // Grab values manually
+    const team_name = form.querySelector('input[name="team_name"]').value;
+    const division = form.querySelector('select[name="division"]').value;
+    const team_size = form.querySelector('select[name="team_size"]').value;
+
+    const participant1_name = form.querySelector('input[name="participant1_name"]').value;
+    const participant1_email = form.querySelector('input[name="participant1_email"]').value;
+    const participant1_phone = form.querySelector('input[name="participant1_phone"]').value;
+    const participant1_age = form.querySelector('select[name="participant1_age"]').value;
+
+    const participant2_name = form.querySelector('input[name="participant2_name"]').value;
+    const participant2_email = form.querySelector('input[name="participant2_email"]').value;
+    const participant2_phone = form.querySelector('input[name="participant2_phone"]').value;
+    const participant2_age = form.querySelector('select[name="participant2_age"]').value;
+
+    const participant3_name = form.querySelector('input[name="participant3_name"]').value;
+    const participant3_email = form.querySelector('input[name="participant3_email"]').value;
+    const participant3_phone = form.querySelector('input[name="participant3_phone"]').value;
+    const participant3_age = form.querySelector('select[name="participant3_age"]').value;
+
+    const refund_terms = form.querySelector('input[name="refund_terms"]').checked ? "Agreed" : "";
+    const payment_terms = form.querySelector('input[name="payment_terms"]').checked ? "Agreed" : "";
+
+    // Send all fields to Google Apps Script
+    fetch('https://script.google.com/macros/s/AKfycbzR3Sx2AhulV0DICDT3QdhtP5M3eVaI0yCWXIg2FStOeVc6RHRwtJss3PijUAAL76xtJw/exec', {
+      method: 'POST',
+      body: new URLSearchParams({
+        team_name: team_name,
+        division: division,
+        team_size: team_size,
+
+        participant1_name: participant1_name,
+        participant1_email: participant1_email,
+        participant1_phone: participant1_phone,
+        participant1_age: participant1_age,
+
+        participant2_name: participant2_name,
+        participant2_email: participant2_email,
+        participant2_phone: participant2_phone,
+        participant2_age: participant2_age,
+
+        participant3_name: participant3_name,
+        participant3_email: participant3_email,
+        participant3_phone: participant3_phone,
+        participant3_age: participant3_age,
+
+        refund_terms: refund_terms,
+        payment_terms: payment_terms, 
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      showNotification("Registration submitted successfully!");
+      form.reset();
+    })
+    .catch(err => {
+      console.error("Error:", err);
+      showNotification("Failed to submit registration. Please try again.", "failure");
+    })
+    .finally(() => {
+      // Restore button
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    });
+  });
+});
