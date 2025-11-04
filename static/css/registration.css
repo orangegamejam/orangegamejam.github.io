@@ -1,3 +1,30 @@
+@media (max-width: 600px) {
+  .registration-wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  #registration-card,
+  .final {
+    padding: 1rem;
+  }
+
+  .registration-header-text {
+    font-size: 1.25rem;
+  }
+
+  .payment-text {
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  #registration-submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
 .registration-wrapper {
     position: relative;
     margin-top: 2.5rem;
@@ -102,6 +129,7 @@ label:has(+ textarea[required])::after {
     margin-top: 1rem;
     padding: 1rem 2rem;
     width: 20%;
+    min-width: 200px;
 }
 
 .red {
