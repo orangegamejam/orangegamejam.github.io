@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const payment_terms = form.querySelector('input[name="payment_terms"]').checked ? "Agreed" : "";
 
     // Send all fields to Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbzRwghTvtDZL4-5Uwhb5SnjPXao0zdYEtK0lYV83OCTMnTs3Ho-yN1TuZTSHlf6vtHOiQ/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyP18K3kTULsqFjiaN1Jf6b8nVeFugzixz5RmRvQQAtF1JAjSlRl1gC23B893dKZaiu_Q/exec', {
       method: 'POST',
       body: new URLSearchParams({
         team_name: team_name,
