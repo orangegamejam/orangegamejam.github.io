@@ -51,13 +51,19 @@
 }
 
 #registration-card-header-form {
-    align-items: center;
+  align-items: flex-start;
 }
 
 .registration-card-header {
     display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+    flex-direction: column;
+}
+
+.registration-header-subtext {
+  color: var(--text-secondary);
+  text-align: left;
+
+  margin-top: 0.5rem;
 }
 
 .registration-header-text {
@@ -68,7 +74,7 @@
     display: inline-block;
     vertical-align: middle;
 
-    margin: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 #registration-header-text-form {
@@ -146,4 +152,14 @@ label:has(+ textarea[required])::after {
     text-align: left;
 
     margin-top: 0.5rem;
+}
+
+.checkbox-field label {
+    display: block;
+}
+
+.checkbox-field {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.25rem;
 }

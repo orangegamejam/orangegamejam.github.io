@@ -31,6 +31,8 @@
     <script type="text/javascript" src="./static/js/sendmessage.js"></script>
     <script type="text/javascript" src="./static/js/register.js"></script>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <!-- Landing Page -->
     <div class="notification-container">
         <!-- Success Notification -->
@@ -139,6 +141,7 @@
             <div class="card" id="registration-card">
                 <div class="registration-card-header" id="registration-card-header-form">
                     <p class="registration-header-text" id="registration-header-text-form">Participant 1</p>
+                    <p class="registration-header-subtext">This is your information. You will be listed as the team's primary contact.</p>
                 </div>
 
                 <div class="registration-form">
@@ -265,7 +268,7 @@
                     <p class="registration-header-text" id="registration-header-text-form">Payment</p>
                 </div>
 
-                <p class="payment-text">To complete registration please pay registration fees <span class="gradient-text">($10)</span> using the link below. Please note that your team will not be officially registered until we have recieved your payment. If you have any questions please email: <span class="gradient-text">orangegamejam@gmail.com.</span><br><br>Payment link: <a href="https://ocps.schoolcashonline.com/Fee/Details/28559/574/False/True"><span class="link">https://ocps.schoolcashonline.com/Fee/Details/28559/574/False/True</span></a></p>
+                <p class="payment-text">To complete registration please pay registration fees <span class="gradient-text">($10)</span> using the link below. Please note that your team will not be officially registered until we have recieved your payment. If you have any questions please email: <span class="gradient-text">orangegamejam@gmail.com.</span><br><br>You must enter the <span class="gradient-text">full team name</span> under "Who are you purchasing this for?" to link the payment to your team.<br><br>Payment link: <a href="https://ocps.schoolcashonline.com/Fee/Details/28559/574/False/True"><span class="link">https://ocps.schoolcashonline.com/Fee/Details/28559/574/False/True</span></a></p>
             </div>
 
             <!--SUBMIT-->
@@ -275,6 +278,11 @@
                         <div class="checkbox-field">
                             <input type="checkbox" id="terms" name="payment_terms" required>
                             <label for="payment_terms">I acknowledge that to complete registration I will have to finish payment using the following link: <a href="https://tinyurl.com/orangegamejam-payment"><span class="link">https://tinyurl.com/orangegamejam-payment</span></a> <span class="red">*</span></label>
+                        </div>
+
+                        <div class="checkbox-field">
+                            <input type="checkbox" id="privacy" name="liability_terms" required>
+                            <label for="refund_terms">I acknowledge that by participating in this event, I and all other participants do so at our own risk. The organizers, venue, and affiliates are not responsible for any injury, loss, or damage that may occur during the event. I also confirm that I have communicated this with my teammates and am completing this form with their consent <span class="red">*</span></label>
                         </div>
 
                         <div class="checkbox-field">

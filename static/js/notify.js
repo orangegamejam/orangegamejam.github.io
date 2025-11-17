@@ -9,7 +9,7 @@ function showNotification(message, type = "success", duration = 3000) {
 
     // Pick the correct notification
     const notification = type === "success" ? success : failure;
-    notification.querySelector(".notification-text").textContent = message;
+    notification.querySelector(".notification-text").innerHTML = message;
     notification.style.display = "flex";
 
     // Animate

@@ -62,8 +62,59 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(response => response.json())
     .then(data => {
-      showNotification("Registration submitted successfully!");
+      showNotification("Registration submitted successfully! A confirmation email was sent to: <strong>" + participant1_email + "</strong>\nPlease make sure to check your spam folder.", duration=5000);
       form.reset();
+
+      emailjs.init({
+        publicKey: "kzcf0R9cqmnvu63XF",
+      });
+
+      // Send confirmation email
+      var main_confirmation = {
+        participant1_name: participant1_name,
+        participant1_email: participant1_email,
+
+        team_name: team_name,
+        team_size: team_size,
+        division: division,
+
+        participant2_name: participant2_name,
+        participant3_name: participant3_name
+      };
+
+      emailjs.send('service_63hu2md', 'template_ivzbnwf', main_confirmation);
+
+      // Send email to participants
+      var participant2_confirmation = {
+        email: participant2_email,
+        name: participant2_name,
+
+        team_name: team_name,
+        team_size: team_size,
+        division: division,
+
+        participant1_name: participant1_name,
+        participant2_name: participant2_name,
+        participant3_name: participant3_name
+      }
+
+      emailjs.send('service_63hu2md', 'template_vysy39u', participant2_confirmation);
+
+      var participant3_confirmation = {
+        email: participant3_email,
+        name: participant3_name,
+
+        team_name: team_name,
+        team_size: team_size,
+        division: division,
+
+        participant1_name: participant1_name,
+        participant2_name: participant2_name,
+        participant3_name: participant3_name
+      }
+
+      emailjs.send('service_63hu2md', 'template_vysy39u', participant3_confirmation);
+
     })
     .catch(err => {
       console.error("Error:", err);
