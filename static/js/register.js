@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(response => response.json())
     .then(data => {
-      showNotification("Registration submitted successfully! A confirmation email was sent to: <strong>" + participant1_email + "</strong>\nPlease make sure to check your spam folder.", duration=5000);
+      showNotification("Registration submitted successfully! A confirmation email was sent to: <strong>" + participant1_email + "</strong>\nPlease make sure to check your spam folder.", 5000);
       form.reset();
 
       emailjs.init({
