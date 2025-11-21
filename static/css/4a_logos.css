@@ -1,0 +1,109 @@
+:root {
+    --base-logo-size: 12rem;
+}
+
+/* Responsive layout */
+/* DESKTOP: */
+@media (min-width: 1024px) {
+
+}
+
+/* TABLET: */
+@media (max-width: 1023px) and (min-width: 768px) {
+
+}
+
+/* MOBILE: */
+@media (max-width: 767px) {
+    .sponsor-logos {
+        gap: 0.5rem !important;
+    }
+}
+
+/*
+--------------
+SPONSORS LOGOS SECTION 
+--------------
+*/
+
+.sponsor-logo-section {
+    margin-bottom: var(--section-spacing);
+    padding: var(--section-padding-vertical) var(--section-padding-horizontal);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+
+    margin-top: 1rem;
+}
+
+.logo-section-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: calc(var(--base-logo-size) * 1);
+}
+
+/* INDIVIDUAL LOGO SECIONS */
+.logo-section {
+    margin-bottom: 0.5rem;
+}
+
+.logo-section-text {
+    text-align: left !important;
+
+    color: var(--text-primary);
+    font-weight: var(--weight-bold);
+
+    position: relative;
+    bottom: 0;
+}
+
+.logo-section-logos {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 1rem;
+    justify-content: start;
+    align-items: start;
+}
+
+
+.logo-section-logos img {
+    width: 100%;
+
+    height: auto;
+    object-fit: contain;
+}
+
+/* SUBGROUPS */
+.subgroup {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+/* LOGO SIZES */
+#primary {
+    max-width: calc(var(--base-logo-size) * 1);
+}
+
+#secondary {
+   max-width: calc(var(--base-logo-size) * 0.75);
+}
+
+/* SPECIAL CONSTRAINSTS */
+#ocls {
+    grid-template-columns: repeat(2, max-content);
+}
