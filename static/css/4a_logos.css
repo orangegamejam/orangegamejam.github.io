@@ -94,13 +94,24 @@ SPONSORS LOGOS SECTION
     gap: 1rem;
 }
 
+.inline-subgroup {
+    display: flex;
+
+    flex-direction: row;
+    gap: 1rem;
+}
+
 /* LOGO SIZES */
 #primary {
     max-width: calc(var(--base-logo-size) * 1);
 }
 
 #secondary {
-   max-width: calc(var(--base-logo-size) * 0.75);
+   max-width: calc(var(--base-logo-size) * 0.5);
+}
+
+#secondary-horizontal {
+   max-width: calc(var(--base-logo-size) * 1.1);
 }
 
 /* SPECIAL CONSTRAINSTS */
