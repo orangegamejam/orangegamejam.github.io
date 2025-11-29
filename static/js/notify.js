@@ -1,3 +1,19 @@
+// Announcement bar
+document.addEventListener('DOMContentLoaded', () => {
+    const announcement = document.getElementById('announcement-bar');
+    const closeBtn = document.getElementById('close-announcement');
+
+    closeBtn.addEventListener('click', () => {
+        announcement.classList.add('dismissed');
+
+        // Remove element after animation completes
+        announcement.addEventListener('transitionend', () => {
+            announcement.style.display = 'none';
+        }, { once: true });
+    });
+});
+
+// Notification popup
 function showNotification(message, type = "success", duration = 3000) {
     const container = document.querySelector(".notification-container");
     const success = container.querySelector(".notification.success");

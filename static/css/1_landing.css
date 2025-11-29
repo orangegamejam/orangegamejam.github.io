@@ -18,6 +18,14 @@
     .landing-section {
         padding-top: 8vh !important;
     }
+
+    .announcement-bar {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .navbar {
+        top: 3.5rem !important;
+    }
 }
 
 /* MOBILE: */
@@ -43,7 +51,7 @@
     }
 
     .landing-section {
-        padding-top: 6vh !important;
+        padding-top: 9vh !important;
     }
 
     .landing-title-left {
@@ -68,6 +76,14 @@
     #landing-action-btn {
         width: 75vw !important;
     }
+
+    .announcement-bar {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .navbar {
+        top: 3.5rem !important;
+    }
 }
 
 .short {
@@ -87,7 +103,7 @@ NAVIGATION BAR
 .navbar {
     display: flex;
     position: fixed;
-    top: 0;
+    top: 2.5rem;
     left: 0;
     right: 0;
 
@@ -407,4 +423,47 @@ LANDING PAGE
 /* PRIVACY POLICY */
 .policy {
     padding: 0rem 4rem;
+}
+
+/* ANNOUNCEMENT BAR */
+.announcement-bar {
+    position: fixed;
+    top: 0; /* same as navbar height */
+    left: 0;
+    right: 0;
+    background-color: var(--action-primary); /* orange */
+    color: white;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    height: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* smooth slide-up animation */
+}
+
+.announcement-bar p {
+    margin: 0;
+}
+
+/* Close button */
+.close-announcement {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-announcement:hover {
+    color: #222;
+}
+
+/* When dismissed */
+.announcement-bar.dismissed {
+    transform: translateY(-100%);
+    opacity: 0;
 }

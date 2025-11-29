@@ -40,7 +40,7 @@
     <script type="text/javascript" src="./static/js/countdown.js"></script>
     <script type="text/javascript" src="./static/js/subscribe.js"></script>
     <script type="text/javascript" src="./static/js/sendmessage.js"></script>
-
+    
     <!-- Landing Page -->
     <div class="notification-container">
         <!-- Success Notification -->
@@ -66,7 +66,11 @@
         </div>
     </div>
 
-    
+    <!-- Announcement bar -->
+    <div class="announcement-bar">
+        <p>The Orange Game Jam has been postponed to March 2026. Stay tuned for updated information on our website.</p>
+    </div>
+
     <nav class="navbar">
         <div class="nav-left">
             <img id="nav-logo" src="./static/img/logo.png" alt="Logo">
@@ -85,7 +89,7 @@
 
         <div class="nav-right">
             <a href="#sponsors-section"><button class="button-holo" id="nav-btn"><span class="gradient-text">Sponsor Us</span></button></a>
-            <a href="registration.html"><button class="button-filled" id="nav-btn">Register Now</button></a>
+            <!--<a href="registration.html"><button class="button-filled" id="nav-btn">Register Now</button></a>-->
 
             <div class="hamburger">
                 <div></div>
@@ -182,10 +186,10 @@
     <section class="registration-section" id="registration-section">
         <div class="section-header">
             <p class="section-title">Team <span class="gradient-text">Registration</span>.</p>
-            <p class="section-description">Registration for participating teams (1-3 people) closes on <span class="gradient-text">December 7th, 2025</span>. Teams will be able register on our website for <span class="gradient-text">$10</span></p>
+            <p class="section-description">Registration for participating teams (1-3 people) will reopen on <span class="gradient-text">January 1st, 2026</span>. Teams will be able register on our website for <span class="gradient-text">$10</span></p>
         </div>
 
-        <a href="registration.html"><button class="button-filled" id="register-btn">Register Now</button></a>
+        <!-- <a href="registration.html"><button class="button-filled" id="register-btn">Register Now</button></a> -->
 
         <div class="card" id="registration-timer">
             <div class="digit">
@@ -242,7 +246,18 @@
         <div class="timeline-wrapper">
             <div class="timeline-line"></div>
             <div class="timeline">
-                <div class="timeline-item completed">
+                <div class="timeline-item next">
+                    <div class="timeline-icon">
+                        <svg class="timeline-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 19.9316">
+                            <g>
+                                <rect height="19.9316" opacity="0" width="20.2832" x="0" y="0"/>
+                                <path d="M9.96094 19.9219C15.459 19.9219 19.9219 15.459 19.9219 9.96094C19.9219 4.46289 15.459 0 9.96094 0C4.46289 0 0 4.46289 0 9.96094C0 15.459 4.46289 19.9219 9.96094 19.9219ZM9.96094 18.2617C5.37109 18.2617 1.66016 14.5508 1.66016 9.96094C1.66016 5.37109 5.37109 1.66016 9.96094 1.66016C14.5508 1.66016 18.2617 5.37109 18.2617 9.96094C18.2617 14.5508 14.5508 18.2617 9.96094 18.2617Z"/>
+                                <path d="M9.95117 11.7188C10.4102 11.7188 10.6836 11.4551 10.6934 10.9473L10.8398 5.79102C10.8496 5.29297 10.459 4.92188 9.94141 4.92188C9.41406 4.92188 9.04297 5.2832 9.05273 5.78125L9.17969 10.9473C9.18945 11.4453 9.46289 11.7188 9.95117 11.7188ZM9.95117 14.8926C10.5078 14.8926 10.9961 14.4434 10.9961 13.877C10.9961 13.3105 10.5176 12.8613 9.95117 12.8613C9.375 12.8613 8.89648 13.3203 8.89648 13.877C8.89648 14.4336 9.38477 14.8926 9.95117 14.8926Z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    
+                    <!-- 
                     <div class="timeline-icon">
                         <svg class="timeline-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 19.9316">
                             <g>
@@ -252,39 +267,40 @@
                             </g>
                         </svg>
                     </div>
+                    -->
                     
                     <div class="card" id="timeline-card">
                         <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Venue and Date Reveal</p>
-                        <p class="card-text tt timeline-text">The event date and venue are now confirmed.</p>
+                        <p class="card-text tt timeline-text">The event date and venue are now re-confirmed.</p>
 
                         <div class="timeline-card-date">
-                            <p class="timeline-card-date-text">10-15-25</p>
+                            <p class="timeline-card-date-text">TBD</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item completed">
+                <div class="timeline-item upcoming">
                     <div class="timeline-icon">
                         <svg class="timeline-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 19.9316">
                             <g>
                                 <rect height="19.9316" opacity="0" width="20.2832" x="0" y="0"/>
                                 <path d="M9.96094 19.9219C15.459 19.9219 19.9219 15.459 19.9219 9.96094C19.9219 4.46289 15.459 0 9.96094 0C4.46289 0 0 4.46289 0 9.96094C0 15.459 4.46289 19.9219 9.96094 19.9219ZM9.96094 18.2617C5.37109 18.2617 1.66016 14.5508 1.66016 9.96094C1.66016 5.37109 5.37109 1.66016 9.96094 1.66016C14.5508 1.66016 18.2617 5.37109 18.2617 9.96094C18.2617 14.5508 14.5508 18.2617 9.96094 18.2617Z"/>
-                                <path d="M8.88672 14.5996C9.20898 14.5996 9.48242 14.4434 9.67773 14.1406L14.1406 7.11914C14.248 6.92383 14.375 6.70898 14.375 6.49414C14.375 6.05469 13.9844 5.77148 13.5742 5.77148C13.3301 5.77148 13.0859 5.92773 12.9004 6.21094L8.84766 12.7148L6.92383 10.2246C6.68945 9.91211 6.47461 9.83398 6.20117 9.83398C5.78125 9.83398 5.44922 10.1758 5.44922 10.6055C5.44922 10.8203 5.53711 11.0254 5.67383 11.2109L8.05664 14.1406C8.30078 14.4629 8.56445 14.5996 8.88672 14.5996Z"/>
+                                <path d="M9.95117 11.7188C10.4102 11.7188 10.6836 11.4551 10.6934 10.9473L10.8398 5.79102C10.8496 5.29297 10.459 4.92188 9.94141 4.92188C9.41406 4.92188 9.04297 5.2832 9.05273 5.78125L9.17969 10.9473C9.18945 11.4453 9.46289 11.7188 9.95117 11.7188ZM9.95117 14.8926C10.5078 14.8926 10.9961 14.4434 10.9961 13.877C10.9961 13.3105 10.5176 12.8613 9.95117 12.8613C9.375 12.8613 8.89648 13.3203 8.89648 13.877C8.89648 14.4336 9.38477 14.8926 9.95117 14.8926Z"/>
                             </g>
                         </svg>
                     </div>
                     
                     <div class="card" id="timeline-card">
-                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Registration Opens</p>
-                        <p class="card-text tt timeline-text">Teams can begin signing up for the event.</p>
+                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Registration Reopens</p>
+                        <p class="card-text tt timeline-text">Teams can begin signing up for the event again.</p>
 
                         <div class="timeline-card-date">
-                            <p class="timeline-card-date-text">10-31-25</p>
+                            <p class="timeline-card-date-text">1-1-26</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item next">
+                <div class="timeline-item upcoming">
                     <div class="timeline-icon">
                         <svg class="timeline-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 19.9316">
                             <g>
@@ -300,7 +316,7 @@
                         <p class="card-text tt timeline-text">Final day to register and lock in your team.</p>
 
                         <div class="timeline-card-date">
-                            <p class="timeline-card-date-text">12-7-25</p>
+                            <p class="timeline-card-date-text">TBD</p>
                         </div>
                     </div>
                 </div>
@@ -318,10 +334,10 @@
                     
                     <div class="card" id="timeline-card">
                         <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Event Day</p>
-                        <p class="card-text tt timeline-text">It’s here! Theme reveal, hackathon, judging, and awards.</p>
+                        <p class="card-text tt timeline-text">It's here! Theme reveal, hackathon, judging, and awards.</p>
 
                         <div class="timeline-card-date">
-                            <p class="timeline-card-date-text">12-14-25</p>
+                            <p class="timeline-card-date-text">TBD</p>
                         </div>
                     </div>
                 </div>
