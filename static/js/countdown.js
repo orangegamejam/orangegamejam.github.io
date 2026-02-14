@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const seconds = document.querySelector("#seconds");
 
     // Set countdown date
-    const targetDate = new Date("2026-03-07T00:00:00").getTime();
+    const targetDate = new Date("2026-03-04T00:00:00").getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
