@@ -7,7 +7,9 @@
 
 /* TABLET: */
 @media (max-width: 1023px) and (min-width: 768px) {
-
+    #schedule-section {
+        max-width: 60% !important;
+    }
 }
 
 /* MOBILE: */
@@ -76,4 +78,44 @@ ABOUT SECTION
 
 .logo-image-black {
     opacity: 0.80;
+}
+
+/* SCHEDULE SECTION */
+#schedule-section {
+    width: 100%;
+    max-width: 40%;
+    margin: 2rem auto 0 auto;
+    padding: 1.5rem 1.75rem;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--text-primary);
+}
+
+.schedule-table tr {
+    border-top: 1px solid var(--border-table);
+}
+
+.schedule-table tr:first-child {
+    border-top: none;
+}
+
+.schedule-table td {
+    padding: 0.75rem 0.75rem 0.75rem 0;
+    font-size: 1rem;
+    font-weight: var(--weight-regular);
+    text-align: left;
+}
+
+.schedule-table .time {
+    font-weight: var(--weight-bold);
+    color: white;
+    white-space: nowrap;
+    padding-right: 1.75rem;
+}
+
+.schedule-table td:not(.time) {
+    color: var(--text-secondary);
 }
