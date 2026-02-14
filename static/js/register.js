@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(response => response.json())
     .then(data => {
-      showNotification("Registration submitted successfully! A confirmation email was sent to: <strong>" + participant1_email + "</strong>\nPlease make sure to check your spam folder.", 5000);
+      showNotification("Registration submitted successfully! A confirmation email was sent to: <strong>" + participant1_email + "</strong>\nPlease make sure to check your spam folder.", "success", 2.25);
       form.reset();
 
       emailjs.init({
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => {
       console.error("Error:", err);
-      showNotification("Failed to submit registration. Please try again.", "failure");
+      showNotification("Failed to submit registration. Please try again.", "failure", 2.25);
     })
     .finally(() => {
       // Restore button

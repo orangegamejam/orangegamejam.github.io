@@ -407,11 +407,11 @@ LANDING PAGE
 }
 
 @keyframes slide-in {
-    20% {
+    15% {
         top: 1rem;
     }
 
-    80% {
+    85% {
         top: 1rem;
     }
 

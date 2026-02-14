@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Notification popup
-function showNotification(message, type = "success", duration = 3000) {
+function showNotification(message, type = "success", duration = 1.25) {
     const container = document.querySelector(".notification-container");
     const success = container.querySelector(".notification.success");
     const failure = container.querySelector(".notification.failure");
@@ -28,6 +28,9 @@ function showNotification(message, type = "success", duration = 3000) {
     notification.querySelector(".notification-text").innerHTML = message;
     notification.style.display = "flex";
 
+    // Set the animation duration dynamically
+    container.style.animationDuration = `${duration}s`;
+
     // Animate
     container.classList.remove("notification-container-animation");
     void container.offsetWidth; // trigger reflow
@@ -36,7 +39,7 @@ function showNotification(message, type = "success", duration = 3000) {
     // Auto-hide after duration
     setTimeout(() => {
         notification.style.display = "none";
-    }, duration);
+    }, duration * 1000);
 }
 
 window.showNotification = showNotification;
