@@ -119,3 +119,8 @@ ABOUT SECTION
 .schedule-table td:not(.time) {
     color: var(--text-secondary);
 }
+
+/* RULES SECTION */
+.rules {
+    margin-top: 2rem;
+}
