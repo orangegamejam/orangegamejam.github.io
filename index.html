@@ -68,10 +68,10 @@
 
     <!-- Announcement bar -->
     <div class="announcement-bar">
-        <p>The Orange Game Jam is back and officially set for March 7th, 2026! <a href="registration.html"><u>Register NOW!</u></a></p>
+        <p>Congratulations to all 2026 Orange Game Jam participants! <a href="results.html#2026"><u>VIEW RESULTS</u></a></p>
     </div>
 
-    <nav class="navbar">
+    <nav class="navbar" id="navbar-announce">
         <div class="nav-left">
             <img id="nav-logo" src="./static/img/logo.png" alt="Logo">
             <a href="#landing-section"><span class="gradient-text long" id="nav-logo-text">The Orange Game Jam</span></a>
@@ -89,7 +89,8 @@
 
         <div class="nav-right">
             <a href="#sponsors-section"><button class="button-holo" id="nav-btn"><span class="gradient-text">Sponsor Us</span></button></a>
-            <a href="registration.html"><button class="button-filled" id="nav-btn">Register Now</button></a>
+            <a href="#stay-updated-section"><button class="button-filled" id="nav-btn">Stay Updated</button></a>
+            <!-- <a href="registration.html"><button class="button-filled" id="nav-btn">Register Now</button></a> -->
 
             <div class="hamburger">
                 <div></div>
@@ -106,7 +107,7 @@
         </div>
     </nav>
 
-    <section class="landing-section" id="landing-section">
+    <section class="landing-section landing-section-announce" id="landing-section">
         <div class="landing-title">
             <div class="landing-title-left">
                 <img id="landing-logo" src="./static/img/logo.png">
@@ -139,7 +140,7 @@
             <div class="card" id="landing-card">
                 <img class="landing-cards-logo" src="./static/icons/icons8-address-48.png"></img>
                 <p class="card-title">Venue & Date</p>
-                <p class="card-text"> UCF Downtown Campus in Orlando, FL. March 7th — 7 AM to 9 PM!</p>
+                <p class="card-text"> UCF Downtown Campus in Orlando, FL. Stay tuned for our next jam!</p>
             </div>
         </div>
 
@@ -154,6 +155,8 @@
         <div class="section-header">
             <p class="section-title">What is <span class="gradient-text">Orange Jam</span>?</p>
             <p class="section-description">Orange Jam is an in-person game development hackathon for all ages and experience levels. <strong class="text-emphasize">Use any platform</strong> — from Scratch and game engines like Unity or Unreal to simple command line games. <span class="text-emphasize">Everything is judged equally</span>, so that anyone can jump in, create, and compete.</p>
+
+            <p class="section-description"><a href="/public/assets/rule-book.pdf" class="gradient-text hyperlink">View the Official Rules</a> for scoring criteria, materials, and important guidelines.</p>
         </div>
 
         <div class="about-cards">
@@ -180,14 +183,14 @@
                 </div>
             </div>
         </div>
-<!--/public/assets/rule-book.pdf-->
+
         <section class="schedule" id="schedule">
             <div id="schedule-header">
                 <div class="section-header">
                     <p class="section-subtitle">Event Schedule</p>
 
                     <div class="card section-description" id="schedule-section">
-                        <table class="schedule-table">
+                        <table class="table schedule-table">
                             <tr>
                                 <td class="time">7:00 AM</td>
                                 <td>Participants arrive and begin signing in</td>
@@ -226,28 +229,65 @@
             </div>
         </section>
 
-        <section class="rules" id="rules">
-            <div id="rules-header">
+        <section class="our-history" id="our-history">
+            <div id="our-history-header">
                 <div class="section-header">
-                    <p class="section-subtitle">Rules</p>
+                    <p class="section-subtitle">Our History</p>
 
-                    <p class="section-description" id="timeline-description">Click <a href="/public/assets/rule-book.pdf" class="gradient-text hyperlink">here</a> to view the event's official rules. The document includes scoring criteria, what to bring, and other important guidelines.</p>
+                    <p class="section-description"> The Orange Game Jam began as an initiative by the <strong class="text-emphasize">Computer Club at University High School</strong> in Orlando, Florida with the goal of creating an accessible competition for students of all backgrounds and skill levels while expanding computer science opportunities for high school students.</p>
+
+                    <p class="section-description" id="section-subheading"><strong>Past Results</strong></p>
+                    <div class="past-results-list">
+                        <a href="results.html#2026" class="gradient-text hyperlink">→ Orange Game Jam March 2026 Results</a>
+                        <!-- <a href="results.html#2027" class="gradient-text hyperlink">→ Orange Game Jam March 2027 Results</a> -->
+                        <!-- <a href="results.html#2028" class="gradient-text hyperlink">→ Orange Game Jam March 2028 Results</a> -->
+                        
+                    </div>
+
+                    <p class="section-description" id="section-subheading"><strong>Meet our Founders</strong></p>
+            </div>
+
+            <div class="founders-grid">
+                <div class="founder-card">
+                    <img src="/static/img/founders/ishan.png" alt="Ishan Patel">
+                    <p class="founder-name">Ishan Patel</p>
+                </div>
+
+                <div class="founder-card">
+                    <img src="/static/img/founders/aadi.png" alt="Aadi">
+                    <p class="founder-name">Aadi Gala</p>
+                </div>
+
+                <div class="founder-card">
+                    <img src="/static/img/founders/montse.png" alt="Montse">
+                    <p class="founder-name">Montserrat Esparza</p>
+                </div>
+
+                <div class="founder-card">
+                    <img src="/static/img/founders/michael.png" alt="Michael">
+                    <p class="founder-name">Michael Quiros</p>
+                </div>
+
+                <div class="founder-card">
+                    <img src="/static/img/founders/sebastian.png" alt="Sebastian">
+                    <p class="founder-name">Sebastian Bojan</p>
                 </div>
             </div>
-        </section>
 
+        </section>
     </section>
 
     <!-- Registration Page -->
     <section class="registration-section" id="registration-section">
         <div class="section-header">
             <p class="section-title">Team <span class="gradient-text">Registration</span>.</p>
-            <p class="section-description">Registration for participating teams (1-3 people) closes on <span class="gradient-text">March 4th, 2026</span>. Teams will be able register on our website for <span class="gradient-text">$5</span></p>
+            <!-- <p class="section-description">Registration for participating teams (1-3 people) closes on <span class="gradient-text">March 4th, 2026</span>. Teams will be able register on our website for <span class="gradient-text">$5</span></p> -->
+            <p class="section-description">Our last jam just concluded on <strong class="text-emphasize">March 7th, 2026</strong>. View the <a class="gradient-text gradient-link" href="results.html#2026">results</a> and join our <a class="gradient-text gradient-link" href="#stay-updated-section">mailing list</a> to be updated on registration for our next jam!</p>
         </div>
 
-        <a href="registration.html"><button class="button-filled" id="register-btn">Register Now</button></a>
+        <!-- <a href="registration.html"><button class="button-filled" id="register-btn">Register Now</button></a> -->
         
-        <!--
+        
         <div class="card" id="registration-timer">
             <div class="digit">
                 <div class="number">
@@ -292,7 +332,7 @@
                 <p class="timer-label">seconds</p>
             </div>
         </div>
-        -->
+        
         
         <div id="timeline-header">
             <div class="section-header">
@@ -337,11 +377,32 @@
                     </div>
                     
                     <div class="card" id="timeline-card">
-                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Venue and Date Reconfirmation</p>
-                        <p class="card-text tt timeline-text">The updated event date and venue are now reconfirmed.</p>
+                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Registration Deadline</p>
+                        <p class="card-text tt timeline-text">Final day to register and lock in your team.</p>
 
                         <div class="timeline-card-date">
-                            <p class="timeline-card-date-text">12-9-25</p>
+                            <p class="timeline-card-date-text">3-4-26</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item completed">
+                    <div class="timeline-icon">
+                        <svg class="timeline-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 19.9316">
+                            <g>
+                                <rect height="19.9316" opacity="0" width="20.2832" x="0" y="0"/>
+                                <path d="M9.96094 19.9219C15.459 19.9219 19.9219 15.459 19.9219 9.96094C19.9219 4.46289 15.459 0 9.96094 0C4.46289 0 0 4.46289 0 9.96094C0 15.459 4.46289 19.9219 9.96094 19.9219ZM9.96094 18.2617C5.37109 18.2617 1.66016 14.5508 1.66016 9.96094C1.66016 5.37109 5.37109 1.66016 9.96094 1.66016C14.5508 1.66016 18.2617 5.37109 18.2617 9.96094C18.2617 14.5508 14.5508 18.2617 9.96094 18.2617Z"/>
+                                <path d="M8.88672 14.5996C9.20898 14.5996 9.48242 14.4434 9.67773 14.1406L14.1406 7.11914C14.248 6.92383 14.375 6.70898 14.375 6.49414C14.375 6.05469 13.9844 5.77148 13.5742 5.77148C13.3301 5.77148 13.0859 5.92773 12.9004 6.21094L8.84766 12.7148L6.92383 10.2246C6.68945 9.91211 6.47461 9.83398 6.20117 9.83398C5.78125 9.83398 5.44922 10.1758 5.44922 10.6055C5.44922 10.8203 5.53711 11.0254 5.67383 11.2109L8.05664 14.1406C8.30078 14.4629 8.56445 14.5996 8.88672 14.5996Z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    
+                    <div class="card" id="timeline-card">
+                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Event Day</p>
+                        <p class="card-text tt timeline-text">It's here! Theme reveal, hackathon, judging, and awards.</p>
+
+                        <div class="timeline-card-date">
+                            <p class="timeline-card-date-text">3-7-26</p>
                         </div>
                     </div>
                 </div>
@@ -358,32 +419,11 @@
                     </div>
                     
                     <div class="card" id="timeline-card">
-                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Registration Deadline</p>
-                        <p class="card-text tt timeline-text">Final day to register and lock in your team.</p>
+                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Future Jams Ahead</p>
+                        <p class="card-text tt timeline-text">Stay tuned for upcoming 2026 & 2027 jams!</p>
 
                         <div class="timeline-card-date">
-                            <p class="timeline-card-date-text">3-4-26</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item upcoming">
-                    <div class="timeline-icon">
-                        <svg class="timeline-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.2832 19.9316">
-                            <g>
-                                <rect height="19.9316" opacity="0" width="20.2832" x="0" y="0"/>
-                                <path d="M9.96094 19.9219C15.459 19.9219 19.9219 15.459 19.9219 9.96094C19.9219 4.46289 15.459 0 9.96094 0C4.46289 0 0 4.46289 0 9.96094C0 15.459 4.46289 19.9219 9.96094 19.9219ZM9.96094 18.2617C5.37109 18.2617 1.66016 14.5508 1.66016 9.96094C1.66016 5.37109 5.37109 1.66016 9.96094 1.66016C14.5508 1.66016 18.2617 5.37109 18.2617 9.96094C18.2617 14.5508 14.5508 18.2617 9.96094 18.2617Z"/>
-                                <path d="M9.95117 11.7188C10.4102 11.7188 10.6836 11.4551 10.6934 10.9473L10.8398 5.79102C10.8496 5.29297 10.459 4.92188 9.94141 4.92188C9.41406 4.92188 9.04297 5.2832 9.05273 5.78125L9.17969 10.9473C9.18945 11.4453 9.46289 11.7188 9.95117 11.7188ZM9.95117 14.8926C10.5078 14.8926 10.9961 14.4434 10.9961 13.877C10.9961 13.3105 10.5176 12.8613 9.95117 12.8613C9.375 12.8613 8.89648 13.3203 8.89648 13.877C8.89648 14.4336 9.38477 14.8926 9.95117 14.8926Z"/>
-                            </g>
-                        </svg>
-                    </div>
-                    
-                    <div class="card" id="timeline-card">
-                        <p class="card-title timeline-text-title timeline-text" id="timeline-text-title">Event Day</p>
-                        <p class="card-text tt timeline-text">It's here! Theme reveal, hackathon, judging, and awards.</p>
-
-                        <div class="timeline-card-date">
-                            <p class="timeline-card-date-text">3-7-26</p>
+                            <p class="timeline-card-date-text">TBD</p>
                         </div>
                     </div>
                 </div>
@@ -413,11 +453,18 @@
         <div class="sponsor-logos">
             <div class="logo-section">
                 <div>
-                    <p class="logo-section-text">Primary Partner</p>
+                    <p class="logo-section-text">Primary Partners</p>
                 </div>
 
                 <div class="logo-section-logos">
-                    <img src="/static/img/sponsors/ucf_logo.png" id="primary">
+                    <div class="subgroup">
+                        <div class="inline-subgroup">
+                            <img src="/static/img/sponsors/ucf_logo.png" id="secondary">
+                            <img src="/static/img/sponsors/employers_4_change_logo.png" id="secondary">
+                        </div>
+                        
+                        <img src="/static/img/sponsors/indenomicon_logo.png" id="secondary-horizontal"> 
+                    </div>
                 </div>
             </div>
 
@@ -444,7 +491,17 @@
                 </div>
 
                 <div class="logo-section-logos">
-                    <img src="/static/img/sponsors/soul_food_logo.jpeg" id="primary">
+                    <div class="subgroup">
+                        <div class="inline-subgroup">
+                            <img src="/static/img/sponsors/soul_food_logo.jpeg" id="secondary">
+                            <img src="/static/img/sponsors/starbucks_logo.png" id="secondary">
+                        </div>
+
+                        <div class="inline-subgroup">
+                            <img src="/static/img/sponsors/dunkin_logo.png" id="secondary">
+                            <img src="/static/img/sponsors/papa_johns_logo.png" id="secondary">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

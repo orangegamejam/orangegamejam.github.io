@@ -19,6 +19,10 @@
         width: 80% !important;
         max-width: 320px !important;
     }
+
+    .founders-grid {
+        row-gap: 0.5rem !important;
+    }
 }
 
 /*
@@ -88,27 +92,6 @@ ABOUT SECTION
     padding: 1.5rem 1.75rem;
 }
 
-.schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    color: var(--text-primary);
-}
-
-.schedule-table tr {
-    border-top: 1px solid var(--border-table);
-}
-
-.schedule-table tr:first-child {
-    border-top: none;
-}
-
-.schedule-table td {
-    padding: 0.75rem 0.75rem 0.75rem 0;
-    font-size: 1rem;
-    font-weight: var(--weight-regular);
-    text-align: left;
-}
-
 .schedule-table .time {
     font-weight: var(--weight-bold);
     color: white;
@@ -120,7 +103,53 @@ ABOUT SECTION
     color: var(--text-secondary);
 }
 
-/* RULES SECTION */
-.rules {
-    margin-top: 2rem;
+/*
+------------
+OUR HISTORY SECTION 
+------------ 
+*/
+
+.our-history {
+    margin-top: 3rem;
+}
+
+/* FOUNDER IMAGES */
+.founders-grid {
+    margin-top: 0rem;
+
+    width: 80%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 140px));
+    justify-content: center;
+
+    column-gap: 1.5rem;
+    row-gap: 0rem;
+
+    text-align: center;
+}
+
+.founder-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.founder-name {
+    margin-top: 0.6rem;
+    font-weight: 600;
+}
+
+/* PAST RESULTS */
+.past-results-list {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    font-size: 1rem;
 }

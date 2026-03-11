@@ -3,6 +3,10 @@
     .landing-section {
         padding-top: 10vh !important;
     }
+
+    .landing-section-announce {
+        margin-top: calc(8vh + 2rem) !important;
+    }
 }
 
 /* TABLET: */
@@ -19,11 +23,15 @@
         padding-top: 8vh !important;
     }
 
-    .announcement-bar {
-        padding: 1.5rem 1rem !important;
+    .landing-section-announce {
+        margin-top: calc(8vh + 2rem) !important;
     }
 
-    .navbar {
+    .announcement-bar {
+        padding: 1rem 1rem !important;
+    }
+
+    #navbar-announce {
         top: 3.5rem !important;
     }
 }
@@ -54,6 +62,10 @@
         padding-top: 9vh !important;
     }
 
+    .landing-section-announce {
+        margin-top: calc(9vh + 2rem) !important;
+    }
+
     .landing-title-left {
         display: none !important;
     }
@@ -81,7 +93,7 @@
         padding: 1.5rem 1rem !important;
     }
 
-    .navbar {
+    #navbar-announce {
         top: 3.5rem !important;
     }
 }
@@ -103,7 +115,7 @@ NAVIGATION BAR
 .navbar {
     display: flex;
     position: fixed;
-    top: 2.5rem;
+    top: 0rem;
     left: 0;
     right: 0;
 
@@ -123,6 +135,10 @@ NAVIGATION BAR
     -webkit-backdrop-filter: blur(16px);
 
     z-index: 2;
+}
+
+#navbar-announce {
+    top: 2.5rem;
 }
 
 /* Left navbar */
@@ -214,8 +230,12 @@ LANDING PAGE
 -------------
 */
 
+.landing-section-announce {
+    margin-top: calc(7.5vh + 2rem) !important;
+}
+
 .landing-section {
-    margin-top: calc(7.5vh + 2rem);
+    margin-top: calc(7.5vh);
     margin-bottom: var(--section-spacing);
     padding: var(--section-padding-vertical) var(--section-padding-horizontal) var(--section-padding-vertical) var(--section-padding-horizontal);
 

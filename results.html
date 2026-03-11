@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Orange Jam</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./static/css/0_base.css">
+    <link rel="stylesheet" href="./static/css/1_landing.css">
+    <link rel="stylesheet" href="./static/css/2_about.css">
+    <link rel="stylesheet" href="./static/css/3_registration.css">
+    <link rel="stylesheet" href="./static/css/4_sponsors.css">
+    <link rel="stylesheet" href="./static/css/5_contact.css">
+    <link rel="stylesheet" href="./static/css/6_footer.css">
+    <link rel="stylesheet" href="./static/css/registration.css">
+    <link rel="stylesheet" href="./static/css/results.css">
+
+    <!-- Link Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./static/img/logo-square.png">
+</head>
+
+<!--Google Analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X1TM7D74WL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X1TM7D74WL');
+</script>
+
+<body>
+    <!-- JS -->
+    <script type="text/javascript" src="./static/js/sidebar.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Landing Page -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img id="nav-logo" src="./static/img/logo.png" alt="Logo">
+            <a href="https://orangegamejam.github.io/#landing-section"><span class="gradient-text long" id="nav-logo-text">The Orange Game Jam</span></a>
+            <a href="https://orangegamejam.github.io/#landing-section"></a><span class="gradient-text short" id="nav-logo-text">Orange Jam</span></a>
+        </div>
+
+        <div class="nav-middle">
+            <div class="nav-links">
+                <a href="https://orangegamejam.github.io/#about-section">About</a>
+                <a href="https://orangegamejam.github.io/#registration-section">Registration</a>
+                <a href="https://orangegamejam.github.io/#sponsors-section">Sponsors</a>
+                <a href="https://orangegamejam.github.io/#contact-section">Contact</a>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <a href="https://orangegamejam.github.io/#sponsors-section"><button class="button-holo" id="nav-btn"><span class="gradient-text">Sponsor Us</span></button></a>
+            <a href="https://orangegamejam.github.io/registration.html"><button class="button-filled" id="nav-btn">Register Now</button></a>
+
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="hamburger-dropdown" id="hamburger-dropdown">
+            <a class="nav-link" href="https://orangegamejam.github.io/#about-section">About</a>
+            <a class="nav-link" href="https://orangegamejam.github.io/#registration-section">Registration</a>
+            <a class="nav-link" href="https://orangegamejam.github.io/#sponsors-section">Sponsors</a>
+            <a class="nav-link" href="https://orangegamejam.github.io/#contact-section">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Results -->
+    <section class="landing-section" id="landing-section">
+         <div class="section-header">
+            <p class="section-title">Results <span class="gradient-text">Archive</span></p>
+            <p class="section-description">Explore past Orange Game Jam results by year.</p>
+        </div>
+
+        <!-- 2026 Results -->
+        <section class="results-year" id="2026">
+            <div class="section-header">
+                <p class="section-subtitle">March 2026 Results</p>
+                <p class="section-description"><a href="https://photos.app.goo.gl/Exv9RasDaa8vbn3MA" class="gradient-text hyperlink">→ Event Photo Album</a></p>
+            </div>
+
+            <!-- Results Table -->
+            <div class="card" id="results-table-card">
+                <table class="table results-table">
+                    <thead>
+                        <tr>
+                            <th>Team</th>
+                            <th>Total</th>
+                            <th>Functionality</th>
+                            <th>Visual & Audio</th>
+                            <th>Theme Integration</th>
+                            <th>Enjoyment</th>
+                            <th>Creativity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-emphasize">We Like Cheese</td>
+                            <td class="table-emphasize">63/75</td>
+                            <td>13/15</td>
+                            <td>9/15</td>
+                            <td>14/15</td>
+                            <td>13/15</td>
+                            <td>14/15</td>
+                        </tr>
+                        <tr>
+                            <td class="table-emphasize">Satisfactician</td>
+                            <td class="table-emphasize">61/75</td>
+                            <td>13/15</td>
+                            <td>14/15</td>
+                            <td>11/15</td>
+                            <td>11/15</td>
+                            <td>12/15</td>
+                        </tr>
+                        <tr>
+                            <td class="table-emphasize">Into The Abyss</td>
+                            <td class="table-emphasize">59/75</td>
+                            <td>11/15</td>
+                            <td>13/15</td>
+                            <td>11/15</td>
+                            <td>11/15</td>
+                            <td>13/15</td>
+                        </tr>
+                        <tr>
+                            <td class="table-emphasize">Broken Monitor</td>
+                            <td class="table-emphasize">57/75</td>
+                            <td>13/15</td>
+                            <td>11/15</td>
+                            <td>11/15</td>
+                            <td>11/15</td>
+                            <td>11/15</td>
+                        </tr>
+                        <tr>
+                            <td class="table-emphasize">The Hollow Knight</td>
+                            <td class="table-emphasize">56/75</td>
+                            <td>12/15</td>
+                            <td>10/15</td>
+                            <td>13/15</td>
+                            <td>8/15</td>
+                            <td>13/15</td>
+                        </tr>
+                        <tr>
+                            <td class="table-emphasize">Dallas</td>
+                            <td class="table-emphasize">55/75</td>
+                            <td>13/15</td>
+                            <td>10/15</td>
+                            <td>11/15</td>
+                            <td>11/15</td>
+                            <td>10/15</td>
+                        </tr>
+                        <tr>
+                            <td class="table-emphasize">Go Citrus</td>
+                            <td class="table-emphasize">49/75</td>
+                            <td>11/15</td>
+                            <td>11/15</td>
+                            <td>10/15</td>
+                            <td>9/15</td>
+                            <td>8/15</td>
+                        </tr>
+                        <tr>
+                            <td class="table-emphasize">Nomadic Panthera</td>
+                            <td class="table-emphasize">46/75</td>
+                            <td>11/15</td>
+                            <td>12/15</td>
+                            <td>6/15</td>
+                            <td>9/15</td>
+                            <td>8/15</td>
+                        </tr>
+                        <tr>
+                            <td class="table-emphasize">The Roblox Baseplaters</td>
+                            <td class="table-emphasize">43/75</td>
+                            <td>11/15</td>
+                            <td>6/15</td>
+                            <td>10/15</td>
+                            <td>8/15</td>
+                            <td>8/15</td>
+                        </tr>
+                        <tr>
+                            <td class="table-emphasize">The Highest Hand</td>
+                            <td class="table-emphasize">42/75</td>
+                            <td>10/15</td>
+                            <td>9/15</td>
+                            <td>8/15</td>
+                            <td>7/15</td>
+                            <td>8/15</td>
+                        </tr>
+                        <tr>
+                            <td class="table-emphasize">African Queens</td>
+                            <td class="table-emphasize">38/75</td>
+                            <td>7/15</td>
+                            <td>7/15</td>
+                            <td>6/15</td>
+                            <td>10/15</td>
+                            <td>8/15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer Page -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">© 2024 The Orange Game Jam | <a class="policy-link" href="privacypolicy.html">Privacy Policy</a></p>
+            <p class="footer-text">Designed and Developed by HoloStudios</p>
+        </div>
+    </footer>
+
+</body>
+</html>
