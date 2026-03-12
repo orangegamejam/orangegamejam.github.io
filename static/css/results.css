@@ -34,6 +34,7 @@ RESULTS SECTION
 #results-table-card {
     align-items: stretch;
     margin: 0rem 1rem;
+    overflow-x: auto;
 }
 
 .results-table th,
